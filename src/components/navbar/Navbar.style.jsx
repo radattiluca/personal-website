@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 //import components
 import Navbar from "./Navbar.jsx";
@@ -14,24 +15,28 @@ export const NavbarInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 10px 10px 20px;
+
+  @media (min-width: 1279px) {
+    padding: 20px 50px 10px 50px;
+  }
 `;
 
 export const NavbarLinkContainer = styled.div`
   display: flex;
 `;
 
-// export const NavbarLink = styled(Link)`
-//   color: #e2ddd0;
-//   text-decoration: none;
-//   font-size: x-large;
-//   margin: 10px;
-//   width: max-content;
-//   cursor: pointer;
+export const NavbarLink = styled(Link)`
+  color: #c0cbb6;
+  text-decoration: none;
+  font-size: x-large;
+  margin: 10px;
+  width: max-content;
+  cursor: pointer;
 
-//   @media (max-width: 767px) {
-//     display: none;
-//   }
-// `;
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
 
 export const OpenLinksButton = styled.button`
   width: 50px;
@@ -44,33 +49,38 @@ export const OpenLinksButton = styled.button`
   cursor: pointer;
   padding-bottom: 44px;
 
-  @media (min-width: 768px) {
+  & img {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: 1279px) {
     display: none;
   }
 `;
 
-// export const NavbarExtendedContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: start;
-//   height: 100vh;
+export const NavbarExtendedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 
-//   @media (min-width: 768px) {
-//     display: none;
-//   }
-// `;
+  @media (min-width: 1279px) {
+    display: none;
+  }
+`;
 
-// export const NavbarLinkExtends = styled(Link)`
-//   display: flex;
-//   color: #e2ddd0;
-//   text-decoration: none;
-//   font-size: x-large;
-//   margin: 10px;
+export const NavbarLinkExtends = styled(Link)`
+  display: flex;
+  color: #c0cbb6;
+  text-decoration: none;
+  font-size: x-large;
+  margin: 10px;
 
-//   @media (min-width: 768px) {
-//     display: none;
-//   }
-// `;
+  @media (min-width: 1279px) {
+    display: none;
+  }
+`;
 
 export const LeftContainer = styled.div`
   display: flex;

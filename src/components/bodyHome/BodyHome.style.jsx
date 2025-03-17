@@ -30,10 +30,64 @@ export const TriangleContainer = styled.div`
   rotate: 120deg;
 
   & img {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     rotate: 240deg;
-    margin: 8px;
+    margin: 0px;
+    cursor: pointer;
+  }
+`;
+
+export const TriangleExpanded = styled.div`
+  background: #f8c954;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 201, 84, 1) 0%,
+    rgba(0, 65, 56, 1) 100%
+  );
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  & button {
+    border: none;
+    background: transparent;
+    color: #c0cbb6;
+    cursor: pointer;
+    padding: 5px;
+
+    & img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  & ul {
+    display: flex;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    list-style: none;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    & li {
+      padding: 0 5px 0 0;
+      & img {
+        width: 100px;
+        height: auto;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 
@@ -44,22 +98,45 @@ export const CircleContainer = styled.div`
     rgba(248, 201, 84, 1) 5%,
     rgba(0, 65, 56, 1) 100%
   );
-  width: 280px;
-  height: 280px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  border-radius: 460px;
-  bottom: 0px;
-  left: -75px;
+  border-radius: 200px;
+  bottom: 50px;
+  left: -30px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   & h3 {
     color: #004138;
-    margin: 50px 0 10px 70px;
-    padding: 5px 40px 5px 10px;
-    font-size: 0.9em;
-    font-weight: 800;
-    text-align: center;
+    width: 60%;
+    margin: 60px 0 10px 80px;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  & img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 100px;
+    top: 0px;
+    left: 30px;
+    padding: 5px;
+  }
+
+  &:hover {
+    width: 280px;
+    height: 280px;
+    bottom: 0px;
+    left: -65px;
+
+    & img {
+      display: none;
+    }
   }
 `;
 
@@ -92,6 +169,7 @@ export const StyledContactContainer = styled.div`
     width: 40px;
     height: 40px;
     margin: 13px 20px 0 0;
+    cursor: pointer;
   }
 `;
 
@@ -152,7 +230,7 @@ export const StyledContainerSkills = styled.div`
   width: 100%;
   height: 30px;
   padding: 30px 0 0 10px;
-  align-items: center;
+  justify-content: center;
 
   & img {
     width: 40px;
@@ -168,5 +246,43 @@ export const StyledContainerSkills = styled.div`
     flex-direction: column;
     height: 100%;
     align-items: flex-start;
+    justify-content: start;
+  }
+`;
+
+export const StyledContainerInfo = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: #c0cbb6;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: scroll;
+
+  & p {
+    margin: 0 auto 0 auto;
+    color: #052f29;
+    line-height: 1.5em;
+    padding: 20px 0 20px 0;
+  }
+
+  & span {
+    display: block;
+  }
+`;
+
+export const StyledButtonCloseInfo = styled.button`
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  cursor: pointer;
+  font-family: "Single Day", cursive;
+
+  & img {
+    width: 20px;
+    height: 20px;
   }
 `;
