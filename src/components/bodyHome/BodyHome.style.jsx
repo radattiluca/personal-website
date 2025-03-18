@@ -191,9 +191,9 @@ export const StyledLogoContainer = styled.div`
   justify-content: center;
 
   & img {
-    width: 35px;
-    height: 35px;
-    margin: 10px 0 0 5px;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 0 7px;
   }
 `;
 
@@ -212,7 +212,7 @@ export const StyledContainerText = styled.div`
 
   & p {
     width: 80%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 30px auto;
     padding: 30px 30px 30px 20px;
     font-size: 1.1em;
   }
@@ -231,6 +231,7 @@ export const StyledContainerSkills = styled.div`
   height: 30px;
   padding: 30px 0 0 10px;
   justify-content: center;
+  align-items: center;
 
   & img {
     width: 40px;

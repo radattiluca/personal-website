@@ -13,11 +13,11 @@ import {
   StyledContactContainer,
   StyledLogoContainer,
   StyledContainerText,
-  StyledContainerSkills,
   StyledContainerInfo,
   StyledButtonCloseInfo,
   TriangleExpanded,
 } from "./BodyHome.style";
+import { StyledContainerCarousel } from "../carousel/Carousel.style";
 
 //import images
 import emailLogo from "../../assets/images/email.gif";
@@ -39,13 +39,6 @@ import finalProject from "../../assets/images/Final.png";
 function BodyHome({ className, children }) {
   const { openInfo, setOpenInfo } = useContext(Context);
   const { expandedTriangle, setExpandedTriangle } = useContext(Context);
-
-  function handleClickOpenInfo() {
-    setOpenInfo((curr) => !curr);
-  }
-  function closeInfo() {
-    setOpenInfo((curr) => !curr);
-  }
 
   return (
     <div className={className}>
@@ -104,15 +97,13 @@ function BodyHome({ className, children }) {
           Sono <span>LUCA</span>, sono uno sviluppatore <span>FRONT END</span> e
           amo esprimere la mia creatività attraverso il digitale.
         </p>
-        <StyledContainerSkills>
-          <img src={htmlLogo} alt="logo html" /> <span>80%</span>
-          <img src={cssLog} alt="logo css" /> <span>60%</span>
-          <img src={jsLogo} alt="logo js" /> <span>40%</span>
-        </StyledContainerSkills>
+
+        <StyledContainerCarousel></StyledContainerCarousel>
       </StyledContainerText>
+
       {openInfo && (
         <StyledContainerInfo>
-          <StyledButtonCloseInfo onClick={closeInfo}>
+          <StyledButtonCloseInfo onClick={() => setOpenInfo((curr) => !curr)}>
             <img src={iconX} alt="icon X" />
           </StyledButtonCloseInfo>
           <p>
@@ -137,7 +128,7 @@ function BodyHome({ className, children }) {
             Se un sito è ben fatto, facile da usare e piacevole alla vista, è
             merito suo!
           </p>
-          <StyledButtonCloseInfo onClick={closeInfo}>
+          <StyledButtonCloseInfo onClick={() => setOpenInfo((curr) => !curr)}>
             Chiudi
           </StyledButtonCloseInfo>
         </StyledContainerInfo>
@@ -146,7 +137,7 @@ function BodyHome({ className, children }) {
       <CircleContainer>
         <img src={questions} alt="question marks" />
         <h3>Vuoi sapare cos'è un Front End Developer?</h3>
-        <StyledWhoIs onClick={handleClickOpenInfo}>
+        <StyledWhoIs onClick={() => setOpenInfo((curr) => !curr)}>
           CLICCA QUI PER SCOPRIRLO
         </StyledWhoIs>
       </CircleContainer>
