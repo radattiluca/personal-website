@@ -8,6 +8,7 @@ export function ContextProvider({ children }) {
   const [openCV, setOpenCV] = useState(false);
   const [expandedTriangle, setExpandedTriangle] = useState(false);
   const [images, setImages] = useState([]);
+  const [slides, setSlides] = useState([]);
 
   return (
     <Context.Provider
@@ -22,6 +23,8 @@ export function ContextProvider({ children }) {
         setExpandedTriangle,
         images,
         setImages,
+        slides,
+        setSlides,
       }}
     >
       {children}

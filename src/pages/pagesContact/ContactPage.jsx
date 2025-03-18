@@ -20,6 +20,9 @@ import { SyledForm } from "../../components/form/Form.style";
 // import store
 import { Context } from "../../store/Context";
 
+//import image
+import iconHome from "../../assets/images/home.png";
+
 function ContactPage({ className, children }) {
   const { extendNavbar } = useContext(Context);
 
@@ -33,7 +36,11 @@ function ContactPage({ className, children }) {
         extendNavbar={extendNavbar ? "300px" : "80px"}
       ></StyledNavbar>
       <SyledPageContact>
-        <StyledTriangleContainerContact></StyledTriangleContainerContact>
+        <StyledTriangleContainerContact>
+          <Link to={"/"}>
+            <img src={iconHome} alt="home icon" />
+          </Link>
+        </StyledTriangleContainerContact>
         <SyledForm></SyledForm>
         <StyledCircleContainerContact>
           <h3>

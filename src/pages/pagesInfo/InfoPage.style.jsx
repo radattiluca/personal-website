@@ -81,8 +81,8 @@ export const StyledCircleContainerInfo = styled.div`
   }
 `;
 
-export const StyledTriangleContainerInfo = styled.div`
-  background: #f8c954;
+export const StyledTriangleContainerInfo = styled(TriangleContainer)`
+  /* background: #f8c954;
   background: linear-gradient(
     90deg,
     rgba(248, 201, 84, 1) 0%,
@@ -93,5 +93,13 @@ export const StyledTriangleContainerInfo = styled.div`
   position: absolute;
   top: 10px;
   left: -140px;
-  rotate: 120deg;
+  rotate: 120deg; */
+
+  & img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 14px;
+    right: -10px;
+  }
 `;

@@ -14,7 +14,15 @@ export const StyledPageProjects = styled.div`
   position: relative;
 `;
 
-export const StyledTriangleContainerProjects = styled(TriangleContainer)``;
+export const StyledTriangleContainerProjects = styled(TriangleContainer)`
+  & img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 14px;
+    right: -10px;
+  }
+`;
 
 export const StyledContainerProjects = styled.div`
   display: flex;

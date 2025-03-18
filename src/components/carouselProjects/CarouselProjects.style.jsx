@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 
 //import components
-import Carousel from "./Carousel.jsx";
+import Carousel from "./CarouselProjects";
 
 export const StyledContainerCarousel = styled(Carousel)`
   width: 100%;
@@ -10,6 +10,7 @@ export const StyledContainerCarousel = styled(Carousel)`
 
 export const CarouselContainer = styled.div`
   width: 100%;
+  height: 100%;
   padding: 20px 0 20px 0;
 `;
 
@@ -20,22 +21,30 @@ export const StyledSlider = styled(Slider)`
     align-items: center;
   }
 
-  /* .slick-prev,
+  .slick-prev {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    left: 15px;
+    rotate: -90deg;
+  }
   .slick-next {
     z-index: 1;
     width: 40px;
     height: 40px;
+    right: -25px;
+    rotate: -90deg;
   }
 
   .slick-prev:before,
   .slick-next:before {
-    font-size: 24px;
-    color: red;
-  } */
+    font-size: 33px;
+    color: #004138;
+  }
 
   .slick-prev,
   .slick-next {
-    display: none !important;
+    z-index: 1;
   }
 `;
 
@@ -46,7 +55,8 @@ export const SlideStyle = styled.div`
   padding: 10px;
 
   img {
-    width: 40px;
+    width: 80%;
+    margin: auto;
     transition: transform 0.3s ease-in-out;
 
     &:hover {

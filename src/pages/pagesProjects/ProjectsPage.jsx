@@ -36,6 +36,9 @@ import reactLogo from "../../assets/images/react.svg";
 import sassLogo from "../../assets/images/sassIcon.png";
 import tsLogo from "../../assets/images/ts-logo.png";
 
+//import image
+import iconHome from "../../assets/images/home.png";
+
 function ProjectsPage({ className, children }) {
   const { extendNavbar } = useContext(Context);
 
@@ -50,7 +53,11 @@ function ProjectsPage({ className, children }) {
       ></StyledNavbar>
 
       <StyledPageProjects>
-        <StyledTriangleContainerProjects></StyledTriangleContainerProjects>
+        <StyledTriangleContainerProjects>
+          <Link to={"/"}>
+            <img src={iconHome} alt="icon home" />
+          </Link>
+        </StyledTriangleContainerProjects>
         <StyledContainerProjects>
           <h3>I miei progetti</h3>
 

@@ -22,6 +22,7 @@ import { Context } from "../../store/Context";
 
 // import image
 import iconCv from "../../assets/images/cv-icon.png";
+import iconHome from "../../assets/images/home.png";
 
 function InfoPage({ className, children }) {
   const { extendNavbar } = useContext(Context);
@@ -38,7 +39,11 @@ function InfoPage({ className, children }) {
       ></StyledNavbar>
 
       <StyledPageInfo>
-        <StyledTriangleContainerInfo></StyledTriangleContainerInfo>
+        <StyledTriangleContainerInfo>
+          <Link to={"/"}>
+            <img src={iconHome} alt="icon home" />
+          </Link>
+        </StyledTriangleContainerInfo>
 
         <StyledContainerInfoAboutMe>
           <h3>Conosciamoci</h3>

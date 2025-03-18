@@ -50,4 +50,12 @@ export const StyledCircleContainerContact = styled.div`
   }
 `;
 
-export const StyledTriangleContainerContact = styled(TriangleContainer)``;
+export const StyledTriangleContainerContact = styled(TriangleContainer)`
+  & img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 14px;
+    right: -10px;
+  }
+`;

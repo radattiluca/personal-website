@@ -30,28 +30,28 @@ export const TriangleContainer = styled.div`
   rotate: 120deg;
 
   & img {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     rotate: 240deg;
     margin: 0px;
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
   }
 `;
 
 export const TriangleExpanded = styled.div`
-  background: #f8c954;
-  background: linear-gradient(
-    90deg,
-    rgba(248, 201, 84, 1) 0%,
-    rgba(0, 65, 56, 1) 100%
-  );
+  background: rgb(248, 201, 84, 0.9);
   width: 100%;
+  height: 100vh;
   position: absolute;
   top: 20px;
   left: 0px;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  z-index: 3;
 
   & button {
     border: none;
@@ -68,6 +68,7 @@ export const TriangleExpanded = styled.div`
 
   & ul {
     display: flex;
+    flex-direction: column;
     position: relative;
     top: 0px;
     right: 0px;
@@ -79,9 +80,14 @@ export const TriangleExpanded = styled.div`
 
     & li {
       padding: 0 5px 0 0;
+      margin-top: 10px;
       & img {
-        width: 100px;
+        width: 100%;
         height: auto;
+        & :hover {
+          cursor: pointer;
+          scale: 1.3;
+        }
       }
     }
 
@@ -206,14 +212,14 @@ export const StyledContainerText = styled.div`
 
   & h2 {
     margin: 10vh auto 0 auto;
-    padding: 30px 30px 10px 30px;
+    padding: 30px 30px 0 30px;
     color: #f8c954;
   }
 
   & p {
     width: 80%;
-    margin: 0 auto 30px auto;
-    padding: 30px 30px 30px 20px;
+    margin: 0 auto 10px auto;
+    padding: 30px;
     font-size: 1.1em;
   }
 

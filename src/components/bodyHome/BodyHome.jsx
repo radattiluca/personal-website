@@ -26,9 +26,15 @@ import gitHubLogo from "../../assets/images/github.png";
 import cssLog from "../../assets/images/cssLogo.png";
 import htmlLogo from "../../assets/images/htmlLogo.png";
 import jsLogo from "../../assets/images/jsLogo.png";
-import logoPortfolio from "../../assets/images/portfolio.gif";
+import logoPortfolio from "../../assets/images/projectsIcon.png";
 import questions from "../../assets/images/questions.png";
 import iconX from "../../assets/images/iconX.png";
+import tslogo from "../../assets/images/ts-logo.png";
+import reactLogo from "../../assets/images/react.svg";
+import sassLogo from "../../assets/images/sassIcon.png";
+import gitLogo from "../../assets/images/Git-Icon.png";
+
+//import images projects
 import htmlcssImage from "../../assets/images/Html&Css.png";
 import jsBasic from "../../assets/images/JsBasic.png";
 import jsAdvanced from "../../assets/images/JsAdvanced.png";
@@ -37,28 +43,54 @@ import reactProject from "../../assets/images/React.png";
 import finalProject from "../../assets/images/Final.png";
 
 import Carousel from "../carousel/Carousel";
+import CarouselProjects from "../carouselProjects/CarouselProjects";
 
 function BodyHome({ className, children }) {
   const { images, setImages } = useContext(Context);
+  const { slides, setSlides } = useContext(Context);
+
+  const arraySlides = [
+    {
+      src: htmlcssImage,
+      alt: "html e css image project",
+    },
+    {
+      src: jsBasic,
+      alt: "js Basic image project",
+    },
+    {
+      src: jsAdvanced,
+      alt: "js Advanced image project",
+    },
+    {
+      src: tsProject,
+      alt: "type script image project",
+    },
+    {
+      src: reactProject,
+      alt: "react image project",
+    },
+    {
+      src: finalProject,
+      alt: "final image project",
+    },
+  ];
 
   const arrayImages = [
-    { src: "../../assets/images/ts-logo.png", alt: "TypeScript" },
-    { src: "../../assets/images/cssLogo.png", alt: "CSS" },
-    { src: "../../assets/images/htmlLogo.png", alt: "HTML" },
-    { src: "../../assets/images/jsLogo.png", alt: "JavaScript" },
-    { src: "../../assets/images/react.svg", alt: "React" },
-    { src: "../../assets/images/sassIcon.png", alt: "SASS" },
-    { src: "../../assets/images/Git-Icon.png", alt: "Git" },
+    { src: tslogo, alt: "TypeScript" },
+    { src: cssLog, alt: "CSS" },
+    { src: htmlLogo, alt: "HTML" },
+    { src: jsLogo, alt: "JavaScript" },
+    { src: reactLogo, alt: "React" },
+    { src: sassLogo, alt: "SASS" },
+    { src: gitLogo, alt: "Git" },
   ];
 
   useEffect(() => {
     setImages(arrayImages);
     console.log(images);
+    setSlides(arraySlides);
   }, []);
-
-  useEffect(() => {
-    console.log(images);
-  }, [images]);
 
   const { openInfo, setOpenInfo } = useContext(Context);
   const { expandedTriangle, setExpandedTriangle } = useContext(Context);
@@ -70,39 +102,15 @@ function BodyHome({ className, children }) {
           <button onClick={() => setExpandedTriangle((curr) => !curr)}>
             <img src={iconX} alt="iconX" />
           </button>
-          <Link to={"/projects"}>
-            <ul>
-              <li>
-                <img src={htmlcssImage} alt="" />
-              </li>
-
-              <li>
-                <img src={jsBasic} alt="" />
-              </li>
-              <li>
-                <img src={jsAdvanced} alt="" />
-              </li>
-              <li>
-                <img src={tsProject} alt="" />
-              </li>
-              <li>
-                <img src={reactProject} alt="" />
-              </li>
-              <li>
-                <img src={finalProject} alt="" />
-              </li>
-            </ul>
-          </Link>
+          <CarouselProjects slidesToShow={4} />
         </TriangleExpanded>
       ) : (
         <TriangleContainer>
-          {/* <Link to={"/projects"}> */}
           <img
             src={logoPortfolio}
             alt="logo portfolio"
             onClick={() => setExpandedTriangle((curr) => !curr)}
           />
-          {/* </Link> */}
         </TriangleContainer>
       )}
 
@@ -122,12 +130,7 @@ function BodyHome({ className, children }) {
         </p>
 
         <StyledContainerCarousel>
-          <Carousel
-            images={images}
-            slidesToShow={4}
-            autoplay={true}
-            speed={3000}
-          />
+          <Carousel slidesToShow={4} autoplay={true} speed={3000} />
         </StyledContainerCarousel>
       </StyledContainerText>
 
@@ -168,7 +171,7 @@ function BodyHome({ className, children }) {
         <img src={questions} alt="question marks" />
         <h3>Vuoi sapare cos'è un Front End Developer?</h3>
         <StyledWhoIs onClick={() => setOpenInfo((curr) => !curr)}>
-          CLICCA QUI PER SCOPRIRLO
+          SCOPRILO!
         </StyledWhoIs>
       </CircleContainer>
       <StyledContactContainer>
