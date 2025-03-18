@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 //import store
 import { Context } from "../../store/Context";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 //import styles
 import {
@@ -36,7 +36,30 @@ import tsProject from "../../assets/images/TypeScript.png";
 import reactProject from "../../assets/images/React.png";
 import finalProject from "../../assets/images/Final.png";
 
+import Carousel from "../carousel/Carousel";
+
 function BodyHome({ className, children }) {
+  const { images, setImages } = useContext(Context);
+
+  const arrayImages = [
+    { src: "../../assets/images/ts-logo.png", alt: "TypeScript" },
+    { src: "../../assets/images/cssLogo.png", alt: "CSS" },
+    { src: "../../assets/images/htmlLogo.png", alt: "HTML" },
+    { src: "../../assets/images/jsLogo.png", alt: "JavaScript" },
+    { src: "../../assets/images/react.svg", alt: "React" },
+    { src: "../../assets/images/sassIcon.png", alt: "SASS" },
+    { src: "../../assets/images/Git-Icon.png", alt: "Git" },
+  ];
+
+  useEffect(() => {
+    setImages(arrayImages);
+    console.log(images);
+  }, []);
+
+  useEffect(() => {
+    console.log(images);
+  }, [images]);
+
   const { openInfo, setOpenInfo } = useContext(Context);
   const { expandedTriangle, setExpandedTriangle } = useContext(Context);
 
@@ -98,7 +121,14 @@ function BodyHome({ className, children }) {
           amo esprimere la mia creatività attraverso il digitale.
         </p>
 
-        <StyledContainerCarousel></StyledContainerCarousel>
+        <StyledContainerCarousel>
+          <Carousel
+            images={images}
+            slidesToShow={4}
+            autoplay={true}
+            speed={3000}
+          />
+        </StyledContainerCarousel>
       </StyledContainerText>
 
       {openInfo && (
