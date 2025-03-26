@@ -134,7 +134,7 @@ export const CircleContainer = styled.div`
     padding: 5px;
   }
 
-  &:hover {
+  /* &:hover {
     width: 280px;
     height: 280px;
     bottom: 0px;
@@ -143,17 +143,17 @@ export const CircleContainer = styled.div`
     & img {
       display: none;
     }
-  }
+  } */
 `;
 
-export const StyledWhoIs = styled.span`
-  margin: 0 0 0 85px;
-  font-family: "Single Day", cursive;
-  color: #c0cbb6;
-  text-decoration: underline;
-  font-size: 1em;
-  cursor: pointer;
-`;
+// export const StyledWhoIs = styled.span`
+// margin: 0 0 0 85px;
+// font-family: "Single Day", cursive;
+// color: #c0cbb6;
+// text-decoration: underline;
+// font-size: 1em;
+// cursor: pointer;
+// `;
 
 export const StyledContactContainer = styled.div`
   width: 100px;
@@ -181,7 +181,7 @@ export const StyledContactContainer = styled.div`
 
 export const StyledLogoContainer = styled.div`
   width: 100px;
-  height: 120px;
+  height: 95px;
   display: flex;
   flex-direction: column;
   background: rgb(248, 201, 84);
@@ -228,6 +228,36 @@ export const StyledContainerText = styled.div`
     font-size: 1.5em;
     color: #f8c954;
   }
+
+  /* Large or high-resolution screens */
+  @media all and (min-width: 1690px) {
+    font-size: 1.5em;
+    & p {
+      width: 60%;
+    }
+    & h2 {
+      margin: 15vh auto 0 auto;
+    }
+  }
+
+  /* Desktop or Laptop screens */
+  @media all and (min-width: 1280px) and (max-width: 1689px) {
+    font-size: 1.2em;
+    & p {
+      width: 60%;
+    }
+    & h2 {
+      margin: 15vh auto 0 auto;
+    }
+  }
+
+  /* Tablet in vertical mode and landscape mode */
+  @media all and (min-width: 481px) and (max-width: 1279px) {
+    font-size: 1.2em;
+    & h2 {
+      margin: 15vh auto 0 auto;
+    }
+  }
 `;
 
 export const StyledContainerSkills = styled.div`
@@ -268,17 +298,6 @@ export const StyledContainerInfo = styled.div`
   padding: 20px;
   margin-bottom: 30px;
   overflow: scroll;
-
-  & p {
-    margin: 0 auto 0 auto;
-    color: #052f29;
-    line-height: 1.5em;
-    padding: 20px 0 20px 0;
-  }
-
-  & span {
-    display: block;
-  }
 `;
 
 export const StyledButtonCloseInfo = styled.button`
@@ -286,10 +305,28 @@ export const StyledButtonCloseInfo = styled.button`
   background: transparent;
   margin-left: auto;
   cursor: pointer;
-  font-family: "Single Day", cursive;
+  color: #004138;
+  font-weight: 600;
+  display: flex;
+  position: sticky;
+  top: 0;
 
   & img {
     width: 20px;
     height: 20px;
+  }
+
+  /* Large or high-resolution screens */
+  @media all and (min-width: 1690px) {
+    font-size: 1.2em;
+  }
+
+  /* Desktop or Laptop screens */
+  @media all and (min-width: 1280px) and (max-width: 1689px) {
+    font-size: 1.2em;
+  }
+
+  /* Tablet in vertical mode and landscape mode */
+  @media all and (min-width: 481px) and (max-width: 1279px) {
   }
 `;

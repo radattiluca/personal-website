@@ -25,11 +25,10 @@ export const StyledPageInfo = styled.div`
 
 export const StyledContainerInfoAboutMe = styled.div`
   width: 90%;
-  height: 55%;
+  height: 58%;
   margin: auto;
   overflow: scroll;
   margin-top: 20vh;
-  box-shadow: 0 8px 6px -6px black;
 
   &::-webkit-scrollbar {
     display: none;

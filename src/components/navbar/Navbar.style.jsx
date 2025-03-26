@@ -33,7 +33,7 @@ export const NavbarLink = styled(Link)`
   width: max-content;
   cursor: pointer;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1279px) {
     display: none;
   }
 `;
@@ -50,8 +50,8 @@ export const OpenLinksButton = styled.button`
   padding-bottom: 44px;
 
   & img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
 
   @media (min-width: 1279px) {
@@ -88,7 +88,6 @@ export const LeftContainer = styled.div`
   justify-content: center;
   width: 50%;
   font-family: "JetBrains Mono", monospace;
-  color: #f8c954;
 
   & p {
     padding-left: 10px;
@@ -96,6 +95,11 @@ export const LeftContainer = styled.div`
 
   & span {
     color: #c0cbb6;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #f8c954;
   }
 `;
 

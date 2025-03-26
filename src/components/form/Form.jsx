@@ -55,7 +55,7 @@ function Contact({ className, children }) {
     <StyledFormContainer>
       <StyledTitleForm>Compila il modulo per contattarmi</StyledTitleForm>
       <form ref={form} onSubmit={sendEmail}>
-        {/* <StyledLabel>Nome Completo</StyledLabel> */}
+        {/* <StyledLabel>Nome Completo</StyledLabel> l'etichetta è importante per l'accessibilità */}
         <StyledInput
           type="text"
           name="user_name"

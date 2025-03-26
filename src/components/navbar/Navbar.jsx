@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 //import styles
 import {
   LeftContainer,
@@ -36,9 +38,11 @@ function Navbar({ className, children }) {
     <div className={className}>
       <NavbarInnerContainer>
         <LeftContainer>
-          <span> {partOfFront}</span>
-          <p>{partOfName}</p>
-          <span>{partOfEnd}</span>
+          <Link to={"/"}>
+            <span> {partOfFront}</span>
+            <p>{partOfName}</p>
+            <span>{partOfEnd}</span>
+          </Link>
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>

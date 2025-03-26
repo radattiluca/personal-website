@@ -11,6 +11,23 @@ export const StyledContainerCarousel = styled(Carousel)`
 export const CarouselContainer = styled.div`
   width: 100%;
   padding: 20px 0 20px 0;
+  /* Large or high-resolution screens */
+  @media all and (min-width: 1690px) {
+    width: 40%;
+    margin: auto;
+  }
+
+  /* Desktop or Laptop screens */
+  @media all and (min-width: 1280px) and (max-width: 1689px) {
+    width: 40%;
+    margin: auto;
+  }
+
+  /* Tablet in vertical mode and landscape mode */
+  @media all and (min-width: 481px) and (max-width: 1279px) {
+    width: 70%;
+    margin: auto;
+  }
 `;
 
 export const StyledSlider = styled(Slider)`

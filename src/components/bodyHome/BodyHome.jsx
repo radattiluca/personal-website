@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 //import store
 import { Context } from "../../store/Context";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 
 //import styles
 import {
   StyledBodyHome,
   TriangleContainer,
   CircleContainer,
-  StyledWhoIs,
+  // StyledWhoIs,
   StyledContactContainer,
   StyledLogoContainer,
   StyledContainerText,
@@ -18,6 +18,7 @@ import {
   TriangleExpanded,
 } from "./BodyHome.style";
 import { StyledContainerCarousel } from "../carousel/Carousel.style";
+import { StyledContainerQ } from "../containerQuestions/ContainerQuestions.style";
 
 //import images
 import emailLogo from "../../assets/images/email.gif";
@@ -48,6 +49,7 @@ import CarouselProjects from "../carouselProjects/CarouselProjects";
 function BodyHome({ className, children }) {
   const { images, setImages } = useContext(Context);
   const { slides, setSlides } = useContext(Context);
+  const { openQuestions, setOpenQuestions } = useState(false);
 
   const arraySlides = [
     {
@@ -123,9 +125,10 @@ function BodyHome({ className, children }) {
         </a>
       </StyledLogoContainer>
       <StyledContainerText>
-        <h2>Benvenuto nel mio sito web!</h2>
+        <h2>Benvenuto nel mio portfolio digitale!</h2>
         <p>
-          Sono <span>LUCA</span>, sono uno sviluppatore <span>FRONT END</span> e
+          Sono <span>LUCA</span>, sono un aspirante <span>FRONT END</span> e
+          <span> UX/UI DESIGNER </span>
           amo esprimere la mia creatività attraverso il digitale.
         </p>
 
@@ -139,40 +142,12 @@ function BodyHome({ className, children }) {
           <StyledButtonCloseInfo onClick={() => setOpenInfo((curr) => !curr)}>
             <img src={iconX} alt="icon X" />
           </StyledButtonCloseInfo>
-          <p>
-            Il Front End Developer è la persona che crea la parte visibile di un
-            sito web o di un'app. In pratica, è quello che si occupa di tutto
-            ciò con cui gli utenti interagiscono: pulsanti, testi, immagini,
-            animazioni e il modo in cui si muovono tra le pagine.
-          </p>
-          <p>
-            <span>Immagina un sito web come un ristorante:</span>Il Front End
-            Developer è lo chef che prepara i piatti in modo che siano belli da
-            vedere e facili da mangiare. Il Back End Developer è chi gestisce la
-            cucina dietro le quinte, facendo in modo che gli ingredienti
-            arrivino nel piatto nel modo giusto.
-          </p>
-          <p>
-            Per creare un sito o un’app, il Front End Developer usa linguaggi
-            come HTML, CSS e JavaScript, che servono a costruire la struttura,
-            lo stile e le funzionalità interattive.
-          </p>
-          <p>
-            Se un sito è ben fatto, facile da usare e piacevole alla vista, è
-            merito suo!
-          </p>
-          <StyledButtonCloseInfo onClick={() => setOpenInfo((curr) => !curr)}>
-            Chiudi
-          </StyledButtonCloseInfo>
+          <StyledContainerQ></StyledContainerQ>
         </StyledContainerInfo>
       )}
 
-      <CircleContainer>
+      <CircleContainer onClick={() => setOpenInfo((curr) => !curr)}>
         <img src={questions} alt="question marks" />
-        <h3>Vuoi sapare cos'è un Front End Developer?</h3>
-        <StyledWhoIs onClick={() => setOpenInfo((curr) => !curr)}>
-          SCOPRILO!
-        </StyledWhoIs>
       </CircleContainer>
       <StyledContactContainer>
         <Link to={"/contact"}>
