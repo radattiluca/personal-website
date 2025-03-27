@@ -23,6 +23,7 @@ import iconXYellow from "../../assets/images/iconXYellow.png";
 function Navbar({ className, children }) {
   const { extendNavbar, setExtendNavbar } = useContext(Context);
 
+  //fare le funzioni direttamente nel onclick
   function handleClickExtendNavbar() {
     setExtendNavbar((curr) => !curr);
   }
@@ -47,9 +48,9 @@ function Navbar({ className, children }) {
         <RightContainer>
           <NavbarLinkContainer>
             <NavbarLink to={"/"}>Home</NavbarLink>
-            <NavbarLink to={"/contact"}>Contact</NavbarLink>
+            <NavbarLink to={"/contact"}>Contatti</NavbarLink>
             <NavbarLink to={"/info"}>Info</NavbarLink>
-            <NavbarLink to={"/projects"}>Projects</NavbarLink>
+            <NavbarLink to={"/projects"}>Progetti</NavbarLink>
             <OpenLinksButton onClick={handleClickExtendNavbar}>
               {extendNavbar ? (
                 <img src={iconXYellow} alt="munu icon" />
@@ -67,13 +68,13 @@ function Navbar({ className, children }) {
             Home
           </NavbarLinkExtends>
           <NavbarLinkExtends to={"/contact"} onClick={closeExtendNavbar}>
-            Contact
+            Contatti
           </NavbarLinkExtends>
           <NavbarLinkExtends to={"/info"} onClick={closeExtendNavbar}>
             Info
           </NavbarLinkExtends>
           <NavbarLinkExtends to={"/projects"} onClick={closeExtendNavbar}>
-            Projects
+            Progetti
           </NavbarLinkExtends>
         </NavbarExtendedContainer>
       )}

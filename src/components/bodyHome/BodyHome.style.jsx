@@ -98,7 +98,7 @@ export const TriangleExpanded = styled.div`
 `;
 
 export const CircleContainer = styled.div`
-  background: rgb(248, 201, 84);
+  /* background: rgb(248, 201, 84);
   background: linear-gradient(
     223deg,
     rgba(248, 201, 84, 1) 5%,
@@ -109,12 +109,43 @@ export const CircleContainer = styled.div`
   position: absolute;
   border-radius: 200px;
   bottom: 50px;
-  left: -30px;
+  left: 30px;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; */
 
-  & h3 {
+  width: 100px;
+  display: flex;
+  background: trasparent;
+  background: linear-gradient(
+    223deg,
+    rgba(248, 201, 84, 1) 44%,
+    rgba(0, 65, 56, 1) 100%
+  );
+  position: absolute;
+  top: 111px;
+  right: -9px;
+  border-radius: 10px;
+  justify-content: center;
+  /* animation: pulseCircle 4s ease 0s infinite normal forwards;
+
+  @keyframes pulseCircle {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  } */
+
+  /* & h3 {
     color: #004138;
     width: 60%;
     margin: 60px 0 10px 80px;
@@ -122,16 +153,16 @@ export const CircleContainer = styled.div`
     font-size: 1em;
     font-weight: 600;
     text-align: left;
-  }
+  } */
 
   & img {
-    width: 60px;
-    height: 60px;
-    position: absolute;
+    width: 30px;
+    height: 30px;
+    /* position: absolute;
     border-radius: 100px;
     top: 0px;
     left: 30px;
-    padding: 5px;
+    padding: 5px; */
   }
 
   /* &:hover {
@@ -156,50 +187,70 @@ export const CircleContainer = styled.div`
 // `;
 
 export const StyledContactContainer = styled.div`
-  width: 100px;
+  /* width: 100px;
   height: 100px;
   border-radius: 200px;
   background: #f8c954;
   background: linear-gradient(
     90deg,
-    rgba(248, 201, 84, 1) 0%,
+    rgba(248, 201, 84, 1) 10%,
     rgba(0, 65, 56, 1) 100%
   );
   position: absolute;
-  right: -30px;
+  right: 30px;
   bottom: 50px;
   display: flex;
   justify-content: center;
+  align-items: center; */
 
-  & img {
-    width: 40px;
-    height: 40px;
-    margin: 13px 20px 0 0;
-    cursor: pointer;
-  }
-`;
-
-export const StyledLogoContainer = styled.div`
   width: 100px;
-  height: 95px;
   display: flex;
-  flex-direction: column;
-  background: rgb(248, 201, 84);
+  background: trasparent;
   background: linear-gradient(
     223deg,
     rgba(248, 201, 84, 1) 44%,
     rgba(0, 65, 56, 1) 100%
   );
   position: absolute;
-  top: 200px;
-  right: -58px;
+  top: 75px;
+  right: -9px;
   border-radius: 10px;
   justify-content: center;
 
   & img {
     width: 30px;
     height: 30px;
-    margin: 10px 0 0 7px;
+    cursor: pointer;
+
+    /* width: 50px;
+    height: 50px;
+    rotate: 240deg;
+    margin: 0px;
+    cursor: pointer;
+    position: absolute;
+    top: 108px;
+    left: 120px; */
+  }
+`;
+
+export const StyledLogoContainer = styled.div`
+  width: 100px;
+  display: flex;
+  background: trasparent;
+  background: linear-gradient(
+    223deg,
+    rgba(248, 201, 84, 1) 44%,
+    rgba(0, 65, 56, 1) 100%
+  );
+  position: absolute;
+  top: 39px;
+  right: -9px;
+  border-radius: 10px;
+  justify-content: center;
+
+  & img {
+    width: 30px;
+    height: 30px;
   }
 `;
 
@@ -211,7 +262,7 @@ export const StyledContainerText = styled.div`
   color: #c0cbb6;
 
   & h2 {
-    margin: 10vh auto 0 auto;
+    margin: 18vh auto 0 auto;
     padding: 30px 30px 0 30px;
     color: #f8c954;
   }

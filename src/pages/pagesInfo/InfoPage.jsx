@@ -16,6 +16,7 @@ import {
   StyledContainerInfoAboutMe,
 } from "./InfoPage.style";
 import { StyledCv } from "../../components/curriculum/Cv.style";
+import { StyledFooter } from "../../components/footer/Footer.style";
 
 // import store
 import { Context } from "../../store/Context";
@@ -94,6 +95,7 @@ function InfoPage({ className, children }) {
         </StyledCircleContainerInfo>
         {openCV && <StyledCv></StyledCv>}
       </StyledPageInfo>
+      <StyledFooter></StyledFooter>
     </StyledAppContainer>
   );
 }

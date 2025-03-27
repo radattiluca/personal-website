@@ -18,6 +18,7 @@ import {
   StyledCardContainerRight,
   StyledCardContainerIcon,
 } from "./ProjectsPage.style";
+import { StyledFooter } from "../../components/footer/Footer.style";
 
 // import store
 import { Context } from "../../store/Context";
@@ -166,6 +167,7 @@ function ProjectsPage({ className, children }) {
           </StyledCardProject>
         </StyledContainerProjects>
       </StyledPageProjects>
+      <StyledFooter></StyledFooter>
     </StyledAppContainer>
   );
 }

@@ -10,8 +10,9 @@ import {
 export const StyledPageProjects = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%; //cambiato da vh perchè il footer saliva sopra
   position: relative;
+  margin-bottom: 50px;
 `;
 
 export const StyledTriangleContainerProjects = styled(TriangleContainer)`

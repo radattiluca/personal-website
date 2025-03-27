@@ -124,6 +124,7 @@ function BodyHome({ className, children }) {
           <img src={linkedinLogo} alt="logo linkedin" />
         </a>
       </StyledLogoContainer>
+
       <StyledContainerText>
         <h2>Benvenuto nel mio portfolio digitale!</h2>
         <p>

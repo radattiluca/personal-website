@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { GlobalStyles } from "../../GlobalStyles.style";
 import { StyledAppContainer } from "../../components/app/App.style";
 import { StyledNavbar } from "../../components/navbar/Navbar.style";
+import { StyledFooter } from "../../components/footer/Footer.style";
 
 import {
   SyledPageContact,
@@ -51,6 +52,7 @@ function ContactPage({ className, children }) {
           </h3>
         </StyledCircleContainerContact>
       </SyledPageContact>
+      <StyledFooter></StyledFooter>
     </StyledAppContainer>
   );
 }

@@ -27,6 +27,15 @@ export const StyledSlider = styled(Slider)`
     height: 40px;
     left: 15px;
     rotate: -90deg;
+    /* Large or high-resolution screens */
+    @media all and (min-width: 1690px) {
+      left: 395px;
+    }
+
+    /* Desktop or Laptop screens */
+    @media all and (min-width: 1280px) and (max-width: 1689px) {
+      left: 395px;
+    }
   }
   .slick-next {
     z-index: 1;
@@ -34,6 +43,16 @@ export const StyledSlider = styled(Slider)`
     height: 40px;
     right: -25px;
     rotate: -90deg;
+
+    /* Large or high-resolution screens */
+    @media all and (min-width: 1690px) {
+      right: 355px;
+    }
+
+    /* Desktop or Laptop screens */
+    @media all and (min-width: 1280px) and (max-width: 1689px) {
+      right: 355px;
+    }
   }
 
   .slick-prev:before,
@@ -61,6 +80,16 @@ export const SlideStyle = styled.div`
 
     &:hover {
       transform: scale(1.2);
+    }
+
+    /* Large or high-resolution screens */
+    @media all and (min-width: 1690px) {
+      width: 30%;
+    }
+
+    /* Desktop or Laptop screens */
+    @media all and (min-width: 1280px) and (max-width: 1689px) {
+      width: 30%;
     }
   }
 `;
