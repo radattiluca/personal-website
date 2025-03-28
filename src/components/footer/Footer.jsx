@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 //import styles
 import {
   FooterInnerContainer,
@@ -12,7 +10,7 @@ import {
 //import images
 import linkedinLogo from "../../assets/images/linkedinLogo.svg";
 import gitHubLogo from "../../assets/images/gitHubLogo.svg";
-import logoLetter from "../../assets/images/logoLetterFooter.png";
+import handshakeLogo from "../../assets/images/handshake.png";
 
 // // import store
 // import { useContext } from "react";
@@ -26,15 +24,6 @@ function Footer({ className, children }) {
   return (
     <div className={className}>
       <FooterInnerContainer>
-        {/* <MiniMenuContainer>
-          <Link to={"/"}>Home</Link>
-          <span>|</span>
-          <Link to={"/contact"}>Contatti</Link>
-          <span>|</span>
-          <Link to={"/info"}>Info</Link>
-          <span>|</span>
-          <Link to={"/projects"}>Progetti</Link>
-        </MiniMenuContainer> */}
         <LeftContainer>
           <h3>Copyright e Credits</h3>
           <p>
@@ -53,6 +42,15 @@ function Footer({ className, children }) {
               <span> React Slick</span>
             </a>
           </p>
+          <p>
+            Navigazione realizzata con
+            <a
+              href="https://https://www.npmjs.com/package/react-scroll-slick.neostack.com/"
+              target="_blank"
+            >
+              <span> React Scroll</span>
+            </a>
+          </p>
         </LeftContainer>
         <CenterContainer>
           <a href="https://github.com/radattiluca" target="_blank">
@@ -64,10 +62,8 @@ function Footer({ className, children }) {
         </CenterContainer>
         <RightContainer>
           <h4>Hai un progetto interessante?</h4>
-          <Link to={"/contact"}>
-            Parliamone!
-            <img src={logoLetter} alt="logo letter" />
-          </Link>
+          <span>Parliamone!</span>
+          <img src={handshakeLogo} alt="logo letter" />
         </RightContainer>
       </FooterInnerContainer>
     </div>

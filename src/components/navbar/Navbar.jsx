@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Element } from "react-scroll";
 
 //import styles
 import {
@@ -39,23 +39,34 @@ function Navbar({ className, children }) {
     <div className={className}>
       <NavbarInnerContainer>
         <LeftContainer>
-          <Link to={"/"}>
-            <span> {partOfFront}</span>
-            <p>{partOfName}</p>
-            <span>{partOfEnd}</span>
-          </Link>
+          <span> {partOfFront}</span>
+          <p>{partOfName}</p>
+          <span>{partOfEnd}</span>
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
-            <NavbarLink to={"/"}>Home</NavbarLink>
-            <NavbarLink to={"/contact"}>Contatti</NavbarLink>
-            <NavbarLink to={"/info"}>Info</NavbarLink>
-            <NavbarLink to={"/projects"}>Progetti</NavbarLink>
+            <NavbarLink to="form" smooth={true} duration={500}>
+              Contattami
+            </NavbarLink>
+            <NavbarLink to="questions" smooth={true} duration={500}>
+              Info
+            </NavbarLink>
+            <NavbarLink to="carouselWorks" smooth={true} duration={500}>
+              Progetti
+            </NavbarLink>
             <OpenLinksButton onClick={handleClickExtendNavbar}>
               {extendNavbar ? (
-                <img src={iconXYellow} alt="munu icon" />
+                <img
+                  src={iconXYellow}
+                  alt="munu icon"
+                  style={{ width: "20px", height: "20px" }}
+                />
               ) : (
-                <img src={iconMenu} alt="munu icon" />
+                <img
+                  src={iconMenu}
+                  alt="munu icon"
+                  style={{ width: "35px", height: "35px" }}
+                />
               )}
             </OpenLinksButton>
           </NavbarLinkContainer>
@@ -64,16 +75,28 @@ function Navbar({ className, children }) {
 
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtends to={"/"} onClick={closeExtendNavbar}>
-            Home
+          <NavbarLinkExtends
+            // onClick={closeExtendNavbar}
+            to="form"
+            smooth={true}
+            duration={500}
+          >
+            Contattami
           </NavbarLinkExtends>
-          <NavbarLinkExtends to={"/contact"} onClick={closeExtendNavbar}>
-            Contatti
-          </NavbarLinkExtends>
-          <NavbarLinkExtends to={"/info"} onClick={closeExtendNavbar}>
+          <NavbarLinkExtends
+            to="questions"
+            smooth={true}
+            duration={500}
+            // onClick={closeExtendNavbar}
+          >
             Info
           </NavbarLinkExtends>
-          <NavbarLinkExtends to={"/projects"} onClick={closeExtendNavbar}>
+          <NavbarLinkExtends
+            // onClick={closeExtendNavbar}
+            to="carouselWorks"
+            smooth={true}
+            duration={500}
+          >
             Progetti
           </NavbarLinkExtends>
         </NavbarExtendedContainer>

@@ -76,6 +76,7 @@ export const SlideStyle = styled.div`
     width: 80%;
     margin: auto;
     transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
 
     &:hover {
       transform: scale(1.2);

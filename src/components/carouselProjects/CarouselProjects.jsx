@@ -2,7 +2,6 @@ import Slider from "react-slick";
 
 import { useContext } from "react";
 import { Context } from "../../store/Context";
-import { Link } from "react-router-dom";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,14 +56,9 @@ export default function CarouselProjects({ slidesToShow }) {
       <StyledSlider {...settings}>
         {slides &&
           slides.map((slide, index) => (
-            <Link
-              to={"/projects"}
-              onClick={() => setExpandedTriangle((curr) => !curr)}
-            >
-              <SlideStyle key={index}>
-                <img src={slide.src} alt={`slide-${index}`} />
-              </SlideStyle>
-            </Link>
+            <SlideStyle key={index}>
+              <img src={slide.src} alt={`slide-${index}`} />
+            </SlideStyle>
           ))}
       </StyledSlider>
     </CarouselContainer>

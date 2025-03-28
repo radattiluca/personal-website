@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Element } from "react-scroll";
 
 //import store
 import { Context } from "../../store/Context";
@@ -22,6 +22,8 @@ import {
 import { StyledContainerCarousel } from "../carousel/Carousel.style";
 import { StyledContainerQ } from "../containerQuestions/ContainerQuestions.style";
 import { StyledForm } from "../form/Form.style";
+import { StyledNavbar } from "../navbar/Navbar.style";
+import { StyledFooter } from "../footer/Footer.style";
 
 //import images
 import emailLogo from "../../assets/images/email.gif";
@@ -103,6 +105,7 @@ function BodyHome({ className, children }) {
 
   return (
     <div className={className}>
+      <StyledNavbar></StyledNavbar>
       <StyledContainerSectionSocial>
         <a href="https://github.com/radattiluca" target="_blank">
           <img src={gitHubLogo} alt="logo github" />
@@ -130,47 +133,34 @@ function BodyHome({ className, children }) {
         </StyledContainerCarousel>
       </StyledContainerSectionCarousel>
 
-      <StyledContainerSectionProjects>
-        <h3>I MIEI LAVORI</h3>
-        <h4>Scorri la selezione per vedere l'anteprima dei miei progetti</h4>
-        <StyledContainerCarouselProjects>
-          <CarouselProjects />
-        </StyledContainerCarouselProjects>
-      </StyledContainerSectionProjects>
+      <Element id="carouselWorks">
+        <StyledContainerSectionProjects>
+          <h3>I MIEI LAVORI</h3>
+          <h4>Scorri la selezione per vedere l'anteprima dei miei progetti</h4>
+          <StyledContainerCarouselProjects>
+            <CarouselProjects />
+          </StyledContainerCarouselProjects>
+        </StyledContainerSectionProjects>
+      </Element>
 
-      <StyledContainerSectionQuestions>
-        <h3>DOMANDE FREQUENTI</h3>
-        <StyledContainerQuestions>
-          <StyledContainerQ></StyledContainerQ>
-        </StyledContainerQuestions>
-      </StyledContainerSectionQuestions>
+      <Element id="questions">
+        <StyledContainerSectionQuestions>
+          <h3>DOMANDE FREQUENTI</h3>
+          <StyledContainerQuestions>
+            <StyledContainerQ></StyledContainerQ>
+          </StyledContainerQuestions>
+        </StyledContainerSectionQuestions>
+      </Element>
 
-      <StyledContainerSectionContact>
-        <h3>CONTATTAMI</h3>
-        <StyledContainerContact>
-          <StyledForm></StyledForm>
-        </StyledContainerContact>
-      </StyledContainerSectionContact>
-
-      {/* {openInfo && (
-        <StyledContainerInfo>
-          <StyledButtonCloseInfo onClick={() => setOpenInfo((curr) => !curr)}>
-            <img src={iconX} alt="icon X" />
-          </StyledButtonCloseInfo>
-          <StyledContainerQ></StyledContainerQ>
-        </StyledContainerInfo>
-      )}
-
-      <StyledContainerCallToAction>
-        <CircleContainer onClick={() => setOpenInfo((curr) => !curr)}>
-          <img src={questions} alt="question marks" />
-        </CircleContainer>
-        <StyledContactContainer>
-          <Link to={"/contact"}>
-            <img src={emailLogo} alt="email logo" />
-          </Link>
-        </StyledContactContainer>
-      </StyledContainerCallToAction> */}
+      <Element id="form">
+        <StyledContainerSectionContact>
+          <h3>CONTATTAMI</h3>
+          <StyledContainerContact>
+            <StyledForm></StyledForm>
+          </StyledContainerContact>
+        </StyledContainerSectionContact>
+      </Element>
+      <StyledFooter></StyledFooter>
     </div>
   );
 }

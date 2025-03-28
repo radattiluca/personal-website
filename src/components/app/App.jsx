@@ -15,11 +15,11 @@ function App() {
   return (
     <StyledAppContainer>
       <GlobalStyles />
-      <StyledNavbar
+      {/* <StyledNavbar
         extendNavbar={extendNavbar ? "300px" : "80px"}
-      ></StyledNavbar>
+      ></StyledNavbar> */}
       <StyledBodyHome></StyledBodyHome>
-      <StyledFooter></StyledFooter>
+      {/* <StyledFooter></StyledFooter> */}
     </StyledAppContainer>
   );
 }

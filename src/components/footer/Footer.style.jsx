@@ -13,11 +13,9 @@ export const FooterInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #004138;
-
   width: 100%;
   color: #f8c954;
-  padding: 10px;
-  z-index: 0;
+  padding: 20px 10px 20px 10px;
 
   & a {
     text-decoration: none;
@@ -38,7 +36,7 @@ export const FooterInnerContainer = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  padding: 20px;
+  padding: 20px 0 20px 0;
   display: flex;
   flex-direction: column;
   flex: 25%;
@@ -46,15 +44,17 @@ export const LeftContainer = styled.div`
   text-align: center;
 
   & p {
-    margin-bottom: 10px;
+    margin: 10px 0 10px 0;
   }
 
   & h3 {
     margin-bottom: 10px;
+    font-weight: 800;
   }
 
   & a {
-    font-weight: 700;
+    color: #f1f3ef;
+    display: block;
   }
 
   /* Large or high-resolution screens */
@@ -93,16 +93,19 @@ export const RightContainer = styled.div`
   text-align: center;
 
   & img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     vertical-align: bottom;
-    margin-left: 5px;
+    margin: auto;
   }
 
   & h4 {
     margin-bottom: 5px;
   }
 
+  & span {
+    color: #f1f3ef;
+  }
   /* Large or high-resolution screens */
   @media all and (min-width: 1690px) {
     text-align: left;
@@ -113,41 +116,3 @@ export const RightContainer = styled.div`
     text-align: left;
   }
 `;
-
-// export const MiniMenuContainer = styled.div`
-//   padding: 20px;
-//   display: flex;
-//   flex-direction: row;
-//   flex: 25%;
-//   margin: auto;
-//   text-align: center;
-//   cursor: pointer;
-//   /* Large or high-resolution screens */
-//   @media all and (min-width: 1690px) {
-//     text-align: left;
-//     flex-direction: column;
-
-//     & span {
-//       display: none;
-//     }
-
-//     & a {
-//       margin-bottom: 10px;
-//       font-size: 1.2em;
-//     }
-//   }
-
-//   /* Desktop or Laptop screens */
-//   @media all and (min-width: 1280px) and (max-width: 1689px) {
-//     text-align: left;
-//     flex-direction: column;
-//     & span {
-//       display: none;
-//     }
-
-//     & a {
-//       margin-bottom: 10px;
-//       font-size: 1.2em;
-//     }
-//   }
-// `;

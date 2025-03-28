@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, Element } from "react-scroll";
 
 //import components
 import Navbar from "./Navbar.jsx";
@@ -49,10 +49,10 @@ export const OpenLinksButton = styled.button`
   cursor: pointer;
   padding-bottom: 44px;
 
-  & img {
-    width: 25px;
-    height: 25px;
-  }
+  /* & img {
+    width: 35px;
+    height: 35px;
+  } */
 
   @media (min-width: 1279px) {
     display: none;
@@ -61,9 +61,11 @@ export const OpenLinksButton = styled.button`
 
 export const NavbarExtendedContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  height: 100%;
+  /* padding: 30px 0 0 0; */
 
   @media (min-width: 1279px) {
     display: none;
@@ -72,10 +74,12 @@ export const NavbarExtendedContainer = styled.div`
 
 export const NavbarLinkExtends = styled(Link)`
   display: flex;
+  text-align: center;
   color: #c0cbb6;
   text-decoration: none;
-  font-size: x-large;
+  font-size: 1em;
   margin: 10px;
+  border-bottom: #c0cbb6 solid 1px;
 
   @media (min-width: 1279px) {
     display: none;
@@ -90,16 +94,14 @@ export const LeftContainer = styled.div`
   font-family: "JetBrains Mono", monospace;
 
   & p {
+    font-size: 1.3em;
     padding-left: 10px;
+    color: #f8c954;
   }
 
   & span {
+    font-size: 1.3em;
     color: #c0cbb6;
-  }
-
-  & a {
-    text-decoration: none;
-    color: #f8c954;
   }
 `;
 
@@ -107,4 +109,5 @@ export const RightContainer = styled.div`
   display: flex;
   justify-content: end;
   width: 50%;
+  align-items: center;
 `;
