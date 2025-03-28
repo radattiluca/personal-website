@@ -16,6 +16,7 @@ import {
   StyledContainerInfo,
   StyledButtonCloseInfo,
   TriangleExpanded,
+  StyledContainerCallToAction,
 } from "./BodyHome.style";
 import { StyledContainerCarousel } from "../carousel/Carousel.style";
 import { StyledContainerQ } from "../containerQuestions/ContainerQuestions.style";
@@ -108,6 +109,7 @@ function BodyHome({ className, children }) {
         </TriangleExpanded>
       ) : (
         <TriangleContainer>
+          <h4>I miei lavori</h4>
           <img
             src={logoPortfolio}
             alt="logo portfolio"
@@ -147,14 +149,16 @@ function BodyHome({ className, children }) {
         </StyledContainerInfo>
       )}
 
-      <CircleContainer onClick={() => setOpenInfo((curr) => !curr)}>
-        <img src={questions} alt="question marks" />
-      </CircleContainer>
-      <StyledContactContainer>
-        <Link to={"/contact"}>
-          <img src={emailLogo} alt="email logo" />
-        </Link>
-      </StyledContactContainer>
+      <StyledContainerCallToAction>
+        <CircleContainer onClick={() => setOpenInfo((curr) => !curr)}>
+          <img src={questions} alt="question marks" />
+        </CircleContainer>
+        <StyledContactContainer>
+          <Link to={"/contact"}>
+            <img src={emailLogo} alt="email logo" />
+          </Link>
+        </StyledContactContainer>
+      </StyledContainerCallToAction>
     </div>
   );
 }

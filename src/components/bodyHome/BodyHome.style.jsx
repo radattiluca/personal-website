@@ -17,32 +17,38 @@ export const StyledBodyHome = styled(BodyHome)`
 
 export const TriangleContainer = styled.div`
   background: #f8c954;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(248, 201, 84, 1) 0%,
     rgba(0, 65, 56, 1) 100%
-  );
+  ); */
   width: 180px;
   height: 160px;
-  position: absolute;
+  /* position: absolute;
   top: 10px;
-  left: -140px;
-  rotate: 120deg;
+  left: -140px; */
+  /* rotate: 120deg; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   & img {
     width: 40px;
     height: 40px;
-    rotate: 240deg;
+    /* rotate: 240deg; */
     margin: 0px;
     cursor: pointer;
-    position: absolute;
+    /* position: absolute;
     top: 10px;
-    left: 10px;
+    left: 10px; */
   }
 `;
 
 export const TriangleExpanded = styled.div`
-  background: rgb(248, 201, 84, 0.9);
+  /* background: rgb(248, 201, 84, 0.9); */
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -98,112 +104,32 @@ export const TriangleExpanded = styled.div`
 `;
 
 export const CircleContainer = styled.div`
-  /* background: rgb(248, 201, 84);
+  width: 117px;
+  height: 57px;
+  display: flex;
+  background: trasparent;
   background: linear-gradient(
     223deg,
-    rgba(248, 201, 84, 1) 5%,
+    rgba(248, 201, 84, 1) 44%,
     rgba(0, 65, 56, 1) 100%
   );
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  border-radius: 200px;
-  bottom: 50px;
-  left: 30px;
-  display: flex;
-  flex-direction: column;
+  /* position: absolute;
+  bottom: 131px;
+  left: 40px; */
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
-  cursor: pointer; */
-
-  width: 100px;
-  display: flex;
-  background: trasparent;
-  background: linear-gradient(
-    223deg,
-    rgba(248, 201, 84, 1) 44%,
-    rgba(0, 65, 56, 1) 100%
-  );
-  position: absolute;
-  top: 111px;
-  right: -9px;
-  border-radius: 10px;
-  justify-content: center;
-  /* animation: pulseCircle 4s ease 0s infinite normal forwards;
-
-  @keyframes pulseCircle {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  } */
-
-  /* & h3 {
-    color: #004138;
-    width: 60%;
-    margin: 60px 0 10px 80px;
-    padding: 5px;
-    font-size: 1em;
-    font-weight: 600;
-    text-align: left;
-  } */
 
   & img {
-    width: 30px;
-    height: 30px;
-    /* position: absolute;
-    border-radius: 100px;
-    top: 0px;
-    left: 30px;
-    padding: 5px; */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
   }
-
-  /* &:hover {
-    width: 280px;
-    height: 280px;
-    bottom: 0px;
-    left: -65px;
-
-    & img {
-      display: none;
-    }
-  } */
 `;
 
-// export const StyledWhoIs = styled.span`
-// margin: 0 0 0 85px;
-// font-family: "Single Day", cursive;
-// color: #c0cbb6;
-// text-decoration: underline;
-// font-size: 1em;
-// cursor: pointer;
-// `;
-
 export const StyledContactContainer = styled.div`
-  /* width: 100px;
-  height: 100px;
-  border-radius: 200px;
-  background: #f8c954;
-  background: linear-gradient(
-    90deg,
-    rgba(248, 201, 84, 1) 10%,
-    rgba(0, 65, 56, 1) 100%
-  );
-  position: absolute;
-  right: 30px;
-  bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-
-  width: 100px;
+  width: 117px;
+  height: 57px;
   display: flex;
   background: trasparent;
   background: linear-gradient(
@@ -211,25 +137,17 @@ export const StyledContactContainer = styled.div`
     rgba(248, 201, 84, 1) 44%,
     rgba(0, 65, 56, 1) 100%
   );
-  position: absolute;
-  top: 75px;
-  right: -9px;
+  /* position: absolute;
+  bottom: 131px;
+  right: 40px; */
   border-radius: 10px;
   justify-content: center;
+  align-items: center;
 
   & img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-
-    /* width: 50px;
+    width: 50px;
     height: 50px;
-    rotate: 240deg;
-    margin: 0px;
     cursor: pointer;
-    position: absolute;
-    top: 108px;
-    left: 120px; */
   }
 `;
 
@@ -380,4 +298,13 @@ export const StyledButtonCloseInfo = styled.button`
   /* Tablet in vertical mode and landscape mode */
   @media all and (min-width: 481px) and (max-width: 1279px) {
   }
+`;
+
+export const StyledContainerCallToAction = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 `;
