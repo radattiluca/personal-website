@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 import InfoPage from "./InfoPage.jsx";
 
-import {
-  CircleContainer,
-  TriangleContainer,
-} from "../../components/bodyHome/BodyHome.style.jsx";
+import // CircleContainer,
+// TriangleContainer,
+"../../components/bodyHome/BodyHome.style.jsx";
 
 export const StyledPageInfo = styled.div`
   display: flex;
@@ -80,7 +79,7 @@ export const StyledCircleContainerInfo = styled.div`
   }
 `;
 
-export const StyledTriangleContainerInfo = styled(TriangleContainer)`
+export const StyledTriangleContainerInfo = styled.div`
   /* background: #f8c954;
   background: linear-gradient(
     90deg,

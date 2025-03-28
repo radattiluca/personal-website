@@ -10,11 +10,20 @@ export const StyledContainerQ = styled(ContainerQuestions)`
 
 export const StyledContainerQuestions = styled.div`
   width: 100%;
-  margin-top: 20px;
-  & h3 {
-    color: #004138;
+  padding: 15px;
+
+  & h4 {
+    color: #c0cbb6;
     padding: 5px;
     margin-bottom: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  & img {
+    width: 25px;
+    height: 25px;
+    margin: auto;
   }
 
   /* Large or high-resolution screens */
@@ -39,9 +48,10 @@ export const StyledContainerQuestions = styled.div`
 
 export const StyledContainerAnswer = styled.div`
   & p {
-    color: #084940;
+    color: #c0cbb6;
     padding: 10px;
     line-height: 1.5em;
+    font-size: 1.2em;
 
     & ul {
       margin-left: 20px;
@@ -53,7 +63,12 @@ export const StyledContainerAnswer = styled.div`
 
   & a {
     text-decoration: none;
-    color: #2e114b;
+    color: #5d9890;
     font-weight: 700;
   }
+`;
+
+export const StyledContainerX = styled.div`
+  width: 100%;
+  text-align: center;
 `;

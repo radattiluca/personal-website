@@ -16,7 +16,7 @@ import {
   StyledCircleContainerContact,
   StyledTriangleContainerContact,
 } from "./ContactPage.style";
-import { SyledForm } from "../../components/form/Form.style";
+import { StyledForm } from "../../components/form/Form.style";
 
 // import store
 import { Context } from "../../store/Context";
@@ -42,7 +42,7 @@ function ContactPage({ className, children }) {
             <img src={iconHome} alt="home icon" />
           </Link>
         </StyledTriangleContainerContact>
-        <SyledForm></SyledForm>
+        <StyledForm></StyledForm>
         <StyledCircleContainerContact>
           <h3>
             Se non vuoi inviarmi un messaggio puoi contattarmi anche tramite:

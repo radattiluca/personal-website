@@ -25,8 +25,8 @@ export const StyledSlider = styled(Slider)`
     z-index: 1;
     width: 40px;
     height: 40px;
-    left: 15px;
-    rotate: -90deg;
+    left: 0px;
+
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
       left: 395px;
@@ -41,8 +41,7 @@ export const StyledSlider = styled(Slider)`
     z-index: 1;
     width: 40px;
     height: 40px;
-    right: -25px;
-    rotate: -90deg;
+    right: 0px;
 
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
@@ -58,7 +57,7 @@ export const StyledSlider = styled(Slider)`
   .slick-prev:before,
   .slick-next:before {
     font-size: 33px;
-    color: #004138;
+    color: #c0cbb6;
   }
 
   .slick-prev,

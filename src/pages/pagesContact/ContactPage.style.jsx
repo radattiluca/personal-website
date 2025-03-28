@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 import ContactPage from "./ContactPage.jsx";
 
-import {
-  CircleContainer,
-  TriangleContainer,
-} from "../../components/bodyHome/BodyHome.style.jsx";
+import // CircleContainer,
+// TriangleContainer,
+"../../components/bodyHome/BodyHome.style.jsx";
 
 export const SyledPageContact = styled.div`
   display: flex;
@@ -50,7 +49,7 @@ export const StyledCircleContainerContact = styled.div`
   }
 `;
 
-export const StyledTriangleContainerContact = styled(TriangleContainer)`
+export const StyledTriangleContainerContact = styled.div`
   & img {
     width: 30px;
     height: 30px;

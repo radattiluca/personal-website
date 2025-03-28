@@ -5,7 +5,7 @@ import BodyHome from "./BodyHome.jsx";
 
 export const StyledBodyHome = styled(BodyHome)`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   margin: auto;
   display: flex;
@@ -14,161 +14,72 @@ export const StyledBodyHome = styled(BodyHome)`
 
   justify-content: space-between;
 `;
-
-export const TriangleContainer = styled.div`
-  background: #f8c954;
-  /* background: linear-gradient(
-    90deg,
-    rgba(248, 201, 84, 1) 0%,
-    rgba(0, 65, 56, 1) 100%
-  ); */
-  width: 180px;
-  height: 160px;
-  /* position: absolute;
-  top: 10px;
-  left: -140px; */
-  /* rotate: 120deg; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+export const StyledContainerSectionSocial = styled.div`
+  width: 100%;
+  padding: 15px;
 
   & img {
     width: 40px;
     height: 40px;
-    /* rotate: 240deg; */
-    margin: 0px;
-    cursor: pointer;
-    /* position: absolute;
-    top: 10px;
-    left: 10px; */
+    margin: 0 5px 0 5px;
   }
 `;
-
-export const TriangleExpanded = styled.div`
-  /* background: rgb(248, 201, 84, 0.9); */
+export const StyledContainerImage = styled.div`
   width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  z-index: 3;
 
-  & button {
-    border: none;
-    background: transparent;
-    color: #c0cbb6;
-    cursor: pointer;
-    padding: 5px;
-
-    & img {
-      width: 15px;
-      height: 15px;
-    }
-  }
-
-  & ul {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 0px;
-    right: 0px;
-    list-style: none;
-    overflow: scroll;
+  & img {
     width: 100%;
-    height: 100%;
-    align-items: center;
-
-    & li {
-      padding: 0 5px 0 0;
-      margin-top: 10px;
-      & img {
-        width: 100%;
-        height: auto;
-        & :hover {
-          cursor: pointer;
-          scale: 1.3;
-        }
-      }
-    }
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 `;
 
-export const CircleContainer = styled.div`
-  width: 117px;
-  height: 57px;
-  display: flex;
-  background: trasparent;
-  background: linear-gradient(
-    223deg,
-    rgba(248, 201, 84, 1) 44%,
-    rgba(0, 65, 56, 1) 100%
-  );
-  /* position: absolute;
-  bottom: 131px;
-  left: 40px; */
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+export const StyledContainerSectionCarousel = styled.div`
+  width: 100%;
+  margin-top: 40px;
 
-  & img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+  & h3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #f8c954;
+    font-weight: 800;
   }
 `;
 
-export const StyledContactContainer = styled.div`
-  width: 117px;
-  height: 57px;
-  display: flex;
-  background: trasparent;
-  background: linear-gradient(
-    223deg,
-    rgba(248, 201, 84, 1) 44%,
-    rgba(0, 65, 56, 1) 100%
-  );
-  /* position: absolute;
-  bottom: 131px;
-  right: 40px; */
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+export const StyledContainerSectionProjects = styled.div`
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px 0 20px 0;
+  background-color: rgb(248, 201, 84, 0.8);
 
-  & img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+  & h3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #004138;
+    font-weight: 800;
+  }
+
+  & h4 {
+    text-align: center;
+    padding: 5px;
+    color: #004138;
   }
 `;
 
-export const StyledLogoContainer = styled.div`
-  width: 100px;
-  display: flex;
-  background: trasparent;
-  background: linear-gradient(
-    223deg,
-    rgba(248, 201, 84, 1) 44%,
-    rgba(0, 65, 56, 1) 100%
-  );
-  position: absolute;
-  top: 39px;
-  right: -9px;
-  border-radius: 10px;
-  justify-content: center;
+export const StyledContainerCarouselProjects = styled.div`
+  width: 100%;
+`;
 
-  & img {
-    width: 30px;
-    height: 30px;
+export const StyledContainerSectionQuestions = styled.div`
+  width: 100%;
+  padding: 20px 0 20px 0;
+
+  & h3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #f8c954;
+    font-weight: 800;
   }
 `;
 
@@ -180,16 +91,15 @@ export const StyledContainerText = styled.div`
   color: #c0cbb6;
 
   & h2 {
-    margin: 18vh auto 0 auto;
-    padding: 30px 30px 0 30px;
+    font-size: 3em;
+    padding: 30px 0 30px 0px;
     color: #f8c954;
   }
 
   & p {
-    width: 80%;
-    margin: 0 auto 10px auto;
-    padding: 30px;
-    font-size: 1.1em;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5em;
   }
 
   & span {
@@ -256,17 +166,8 @@ export const StyledContainerSkills = styled.div`
   }
 `;
 
-export const StyledContainerInfo = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: #c0cbb6;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  z-index: 3;
-  padding: 20px;
-  margin-bottom: 30px;
-  overflow: scroll;
+export const StyledContainerQuestions = styled.div`
+  width: 100%;
 `;
 
 export const StyledButtonCloseInfo = styled.button`
@@ -299,12 +200,18 @@ export const StyledButtonCloseInfo = styled.button`
   @media all and (min-width: 481px) and (max-width: 1279px) {
   }
 `;
-
-export const StyledContainerCallToAction = styled.div`
+export const StyledContainerSectionContact = styled.div`
   width: 100%;
-  height: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  background-color: rgb(248, 201, 84, 0.8);
+  padding: 20px 0 60px 0;
+  & h3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #004138;
+    font-weight: 800;
+  }
+`;
+export const StyledContainerContact = styled.div`
+  width: 100%;
 `;

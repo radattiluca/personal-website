@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 import ProjectsPage from "./ProjectsPage.jsx";
 
-import {
-  CircleContainer,
-  TriangleContainer,
-} from "../../components/bodyHome/BodyHome.style.jsx";
+import // CircleContainer,
+// TriangleContainer,
+"../../components/bodyHome/BodyHome.style.jsx";
 
 export const StyledPageProjects = styled.div`
   display: flex;
@@ -15,7 +14,7 @@ export const StyledPageProjects = styled.div`
   margin-bottom: 50px;
 `;
 
-export const StyledTriangleContainerProjects = styled(TriangleContainer)`
+export const StyledTriangleContainerProjects = styled.div`
   & img {
     width: 30px;
     height: 30px;

@@ -6,12 +6,12 @@ import {
   LeftContainer,
   CenterContainer,
   RightContainer,
-  MiniMenuContainer,
+  // MiniMenuContainer,
 } from "./Footer.style";
 
 //import images
-import linkedinLogo from "../../assets/images/linkedin.png";
-import gitHubLogo from "../../assets/images/github.png";
+import linkedinLogo from "../../assets/images/linkedinLogo.svg";
+import gitHubLogo from "../../assets/images/gitHubLogo.svg";
 import logoLetter from "../../assets/images/logoLetterFooter.png";
 
 // // import store
@@ -26,7 +26,7 @@ function Footer({ className, children }) {
   return (
     <div className={className}>
       <FooterInnerContainer>
-        <MiniMenuContainer>
+        {/* <MiniMenuContainer>
           <Link to={"/"}>Home</Link>
           <span>|</span>
           <Link to={"/contact"}>Contatti</Link>
@@ -34,7 +34,7 @@ function Footer({ className, children }) {
           <Link to={"/info"}>Info</Link>
           <span>|</span>
           <Link to={"/projects"}>Progetti</Link>
-        </MiniMenuContainer>
+        </MiniMenuContainer> */}
         <LeftContainer>
           <h3>Copyright e Credits</h3>
           <p>

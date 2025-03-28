@@ -7,24 +7,26 @@ import { useContext, useEffect, useState } from "react";
 //import styles
 import {
   StyledBodyHome,
-  TriangleContainer,
-  CircleContainer,
-  // StyledWhoIs,
-  StyledContactContainer,
-  StyledLogoContainer,
+  StyledContainerImage,
+  StyledContainerSectionProjects,
+  StyledContainerSectionSocial,
+  StyledContainerCarouselProjects,
+  StyledContainerSectionQuestions,
   StyledContainerText,
-  StyledContainerInfo,
+  StyledContainerQuestions,
   StyledButtonCloseInfo,
-  TriangleExpanded,
-  StyledContainerCallToAction,
+  StyledContainerSectionCarousel,
+  StyledContainerSectionContact,
+  StyledContainerContact,
 } from "./BodyHome.style";
 import { StyledContainerCarousel } from "../carousel/Carousel.style";
 import { StyledContainerQ } from "../containerQuestions/ContainerQuestions.style";
+import { StyledForm } from "../form/Form.style";
 
 //import images
 import emailLogo from "../../assets/images/email.gif";
-import linkedinLogo from "../../assets/images/linkedin.png";
-import gitHubLogo from "../../assets/images/github.png";
+import linkedinLogo from "../../assets/images/linkedinLogo.svg";
+import gitHubLogo from "../../assets/images/gitHubLogo.svg";
 import cssLog from "../../assets/images/cssLogo.png";
 import htmlLogo from "../../assets/images/htmlLogo.png";
 import jsLogo from "../../assets/images/jsLogo.png";
@@ -35,6 +37,8 @@ import tslogo from "../../assets/images/ts-logo.png";
 import reactLogo from "../../assets/images/react.svg";
 import sassLogo from "../../assets/images/sassIcon.png";
 import gitLogo from "../../assets/images/Git-Icon.png";
+
+import imageHome from "../../assets/images/ImageHome.svg";
 
 //import images projects
 import htmlcssImage from "../../assets/images/Html&Css.png";
@@ -96,51 +100,59 @@ function BodyHome({ className, children }) {
   }, []);
 
   const { openInfo, setOpenInfo } = useContext(Context);
-  const { expandedTriangle, setExpandedTriangle } = useContext(Context);
 
   return (
     <div className={className}>
-      {expandedTriangle ? (
-        <TriangleExpanded>
-          <button onClick={() => setExpandedTriangle((curr) => !curr)}>
-            <img src={iconX} alt="iconX" />
-          </button>
-          <CarouselProjects slidesToShow={4} />
-        </TriangleExpanded>
-      ) : (
-        <TriangleContainer>
-          <h4>I miei lavori</h4>
-          <img
-            src={logoPortfolio}
-            alt="logo portfolio"
-            onClick={() => setExpandedTriangle((curr) => !curr)}
-          />
-        </TriangleContainer>
-      )}
-
-      <StyledLogoContainer>
+      <StyledContainerSectionSocial>
         <a href="https://github.com/radattiluca" target="_blank">
           <img src={gitHubLogo} alt="logo github" />
         </a>
         <a href="https://www.linkedin.com/in/radatti-luca/" target="_blank">
           <img src={linkedinLogo} alt="logo linkedin" />
         </a>
-      </StyledLogoContainer>
-
+      </StyledContainerSectionSocial>
+      <StyledContainerImage>
+        <img src={imageHome} alt="picture keyboard with hands" />
+      </StyledContainerImage>
       <StyledContainerText>
-        <h2>Benvenuto nel mio portfolio digitale!</h2>
+        <h2>BENVENUTI!</h2>
         <p>
           Sono <span>LUCA</span>, sono un aspirante <span>FRONT END</span> e
           <span> UX/UI DESIGNER </span>
           amo esprimere la mia creatività attraverso il digitale.
         </p>
+      </StyledContainerText>
 
+      <StyledContainerSectionCarousel>
+        <h3>LE MIE SKILLS</h3>
         <StyledContainerCarousel>
           <Carousel slidesToShow={4} autoplay={true} speed={3000} />
         </StyledContainerCarousel>
-      </StyledContainerText>
+      </StyledContainerSectionCarousel>
 
-      {openInfo && (
+      <StyledContainerSectionProjects>
+        <h3>I MIEI LAVORI</h3>
+        <h4>Scorri la selezione per vedere l'anteprima dei miei progetti</h4>
+        <StyledContainerCarouselProjects>
+          <CarouselProjects />
+        </StyledContainerCarouselProjects>
+      </StyledContainerSectionProjects>
+
+      <StyledContainerSectionQuestions>
+        <h3>DOMANDE FREQUENTI</h3>
+        <StyledContainerQuestions>
+          <StyledContainerQ></StyledContainerQ>
+        </StyledContainerQuestions>
+      </StyledContainerSectionQuestions>
+
+      <StyledContainerSectionContact>
+        <h3>CONTATTAMI</h3>
+        <StyledContainerContact>
+          <StyledForm></StyledForm>
+        </StyledContainerContact>
+      </StyledContainerSectionContact>
+
+      {/* {openInfo && (
         <StyledContainerInfo>
           <StyledButtonCloseInfo onClick={() => setOpenInfo((curr) => !curr)}>
             <img src={iconX} alt="icon X" />
@@ -158,7 +170,7 @@ function BodyHome({ className, children }) {
             <img src={emailLogo} alt="email logo" />
           </Link>
         </StyledContactContainer>
-      </StyledContainerCallToAction>
+      </StyledContainerCallToAction> */}
     </div>
   );
 }
