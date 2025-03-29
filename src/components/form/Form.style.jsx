@@ -17,13 +17,28 @@ export const StyledFormContainer = styled.div`
   background-color: white;
   padding: 20px;
   border-radius: 9px;
+
+  /* Large or high-resolution screens */
+  @media all and (min-width: 1690px) {
+    width: 20%;
+  }
+
+  /* Desktop or Laptop screens */
+  @media all and (min-width: 1280px) and (max-width: 1689px) {
+    width: 30%;
+  }
+
+  /* Tablet in vertical mode and landscape mode */
+  @media all and (min-width: 481px) and (max-width: 1279px) {
+    width: 40%;
+  }
 `;
 
 export const StyledInput = styled.input`
   width: 100%;
   border: none;
   height: 30px;
-  margin: 8px 0 8px 0;
+  margin: 20px 0 8px 0;
   padding-bottom: 10px;
   background: transparent;
   border-bottom: 1px solid #c0cbb6;
@@ -82,7 +97,7 @@ export const StyledTextArea = styled.textarea`
   border: none;
   border-bottom: 1px solid #c0cbb6;
   display: flex;
-  margin: 8px 0 8px 0;
+  margin: 20px 0 8px 0;
   overflow: scroll;
   background: transparent;
   color: #004138;
@@ -106,6 +121,20 @@ export const StyledTextArea = styled.textarea`
       color: #004138;
     }
   }
+
+  /* Large or high-resolution screens */
+  @media all and (min-width: 1690px) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  /* Desktop or Laptop screens */
+  @media all and (min-width: 1280px) and (max-width: 1689px) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 export const StyledTitleForm = styled.h4`
@@ -113,4 +142,5 @@ export const StyledTitleForm = styled.h4`
   text-align: center;
   margin-bottom: 30px;
   color: #004138;
+  font-size: 1.3em;
 `;

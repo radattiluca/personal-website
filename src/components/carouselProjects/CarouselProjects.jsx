@@ -12,6 +12,7 @@ import {
   StyledSlider,
   SlideStyle,
 } from "./CarouselProjects.style";
+import { StyledDetailsCards } from "../detailsCards/DetailsCard.style";
 
 export default function CarouselProjects({ slidesToShow }) {
   const { slides } = useContext(Context);
@@ -21,34 +22,34 @@ export default function CarouselProjects({ slidesToShow }) {
     infinite: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1689,
+    //     settings: {
+    //       slidesToShow: 4,
+    //       slidesToScroll: 4,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 1279,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 2,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
 
   return (
@@ -58,6 +59,9 @@ export default function CarouselProjects({ slidesToShow }) {
           slides.map((slide, index) => (
             <SlideStyle key={index}>
               <img src={slide.src} alt={`slide-${index}`} />
+              {/* <p>{slide.link}</p>
+              <p>{slide.repository}</p> */}
+              {/* <StyledDetailsCards></StyledDetailsCards> */}
             </SlideStyle>
           ))}
       </StyledSlider>

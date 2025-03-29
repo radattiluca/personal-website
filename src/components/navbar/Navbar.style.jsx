@@ -26,7 +26,7 @@ export const NavbarLinkContainer = styled.div`
 `;
 
 export const NavbarLink = styled(Link)`
-  color: #c0cbb6;
+  color: #f8c954;
   text-decoration: none;
   font-size: x-large;
   margin: 10px;
@@ -35,6 +35,35 @@ export const NavbarLink = styled(Link)`
 
   @media (max-width: 1279px) {
     display: none;
+  }
+  & {
+    color: #f8c954;
+    position: relative;
+    text-decoration: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: #c0cbb6;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: #c0cbb6;
+    transition: transform 0.4s ease-in-out;
   }
 `;
 
@@ -65,10 +94,14 @@ export const NavbarExtendedContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  /* padding: 30px 0 0 0; */
 
   @media (min-width: 1279px) {
     display: none;
+  }
+
+  /* Tablet in vertical mode and landscape mode */
+  @media all and (min-width: 481px) and (max-width: 1279px) {
+    font-size: 1.3em;
   }
 `;
 

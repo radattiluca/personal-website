@@ -55,24 +55,30 @@ function Contact({ className, children }) {
     <StyledFormContainer>
       <StyledTitleForm>Compila il modulo per contattarmi</StyledTitleForm>
       <form ref={form} onSubmit={sendEmail}>
-        {/* <StyledLabel>Nome Completo</StyledLabel> l'etichetta è importante per l'accessibilità */}
         <StyledInput
+          aria-label="name"
           type="text"
           name="user_name"
           onChange={handleNameChange}
           placeholder="Nome Completo"
           required
         />
-        {/* <StyledLabel>Email</StyledLabel> */}
+
         <StyledInput
+          aria-label="email"
           type="email"
           name="user_email"
           onChange={handleEmailChange}
           placeholder="Email"
           required
         />
-        {/* <StyledLabel>Messaggio</StyledLabel> */}
-        <StyledTextArea name="message" placeholder="Messaggio" required />
+
+        <StyledTextArea
+          aria-label="message"
+          name="message"
+          placeholder="Messaggio"
+          required
+        />
         <StyledInputSubmit type="submit" value="Invia" />
       </form>
     </StyledFormContainer>

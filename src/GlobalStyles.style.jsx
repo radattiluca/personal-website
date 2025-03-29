@@ -17,6 +17,14 @@ export const GlobalStyles = createGlobalStyle`
 
     }
 
+    body {
+  cursor: url('/cursor.png'), auto;
+}
+
+/* body:hover {
+  cursor: url('/cursor-hover.png'), auto;
+} */
+
 
 
 

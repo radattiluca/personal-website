@@ -25,13 +25,13 @@ export const FooterInnerContainer = styled.div`
   /* Large or high-resolution screens */
   @media all and (min-width: 1690px) {
     flex-direction: row;
-    padding: 0 50px 0 50px;
+    padding: 20px 80px 20px 80px;
   }
 
   /* Desktop or Laptop screens */
   @media all and (min-width: 1280px) and (max-width: 1689px) {
     flex-direction: row;
-    padding: 0 50px 0 50px;
+    padding: 20px 80px 20px 80px;
   }
 `;
 
@@ -81,6 +81,9 @@ export const CenterContainer = styled.div`
     width: 40px;
     height: 40px;
     margin: 0 5px 0 5px;
+    &:hover {
+      scale: 1.2;
+    }
   }
 `;
 
@@ -105,14 +108,5 @@ export const RightContainer = styled.div`
 
   & span {
     color: #f1f3ef;
-  }
-  /* Large or high-resolution screens */
-  @media all and (min-width: 1690px) {
-    text-align: left;
-  }
-
-  /* Desktop or Laptop screens */
-  @media all and (min-width: 1280px) and (max-width: 1689px) {
-    text-align: left;
   }
 `;

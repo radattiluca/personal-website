@@ -18,6 +18,7 @@ import {
   StyledContainerSectionCarousel,
   StyledContainerSectionContact,
   StyledContainerContact,
+  StyledSectionTopDesktop,
 } from "./BodyHome.style";
 import { StyledContainerCarousel } from "../carousel/Carousel.style";
 import { StyledContainerQ } from "../containerQuestions/ContainerQuestions.style";
@@ -26,15 +27,12 @@ import { StyledNavbar } from "../navbar/Navbar.style";
 import { StyledFooter } from "../footer/Footer.style";
 
 //import images
-import emailLogo from "../../assets/images/email.gif";
+
 import linkedinLogo from "../../assets/images/linkedinLogo.svg";
 import gitHubLogo from "../../assets/images/gitHubLogo.svg";
 import cssLog from "../../assets/images/cssLogo.png";
 import htmlLogo from "../../assets/images/htmlLogo.png";
 import jsLogo from "../../assets/images/jsLogo.png";
-import logoPortfolio from "../../assets/images/projectsIcon.png";
-import questions from "../../assets/images/questions.png";
-import iconX from "../../assets/images/iconX.png";
 import tslogo from "../../assets/images/ts-logo.png";
 import reactLogo from "../../assets/images/react.svg";
 import sassLogo from "../../assets/images/sassIcon.png";
@@ -62,6 +60,8 @@ function BodyHome({ className, children }) {
     {
       src: htmlcssImage,
       alt: "html e css image project",
+      link: "https://radattiluca.github.io./",
+      repository: "https://github.com/radattiluca/radattiluca.github.io",
     },
     {
       src: jsBasic,
@@ -106,6 +106,7 @@ function BodyHome({ className, children }) {
   return (
     <div className={className}>
       <StyledNavbar></StyledNavbar>
+
       <StyledContainerSectionSocial>
         <a href="https://github.com/radattiluca" target="_blank">
           <img src={gitHubLogo} alt="logo github" />
@@ -114,17 +115,19 @@ function BodyHome({ className, children }) {
           <img src={linkedinLogo} alt="logo linkedin" />
         </a>
       </StyledContainerSectionSocial>
-      <StyledContainerImage>
-        <img src={imageHome} alt="picture keyboard with hands" />
-      </StyledContainerImage>
-      <StyledContainerText>
-        <h2>BENVENUTI!</h2>
-        <p>
-          Sono <span>LUCA</span>, sono un aspirante <span>FRONT END</span> e
-          <span> UX/UI DESIGNER </span>
-          amo esprimere la mia creatività attraverso il digitale.
-        </p>
-      </StyledContainerText>
+      <StyledSectionTopDesktop>
+        <StyledContainerImage>
+          <img src={imageHome} alt="picture keyboard with hands" />
+        </StyledContainerImage>
+        <StyledContainerText>
+          <h2>BENVENUTI!</h2>
+          <p>
+            Sono <span>LUCA</span>, sono un aspirante <span>FRONT END</span> e
+            <span> UX/UI DESIGNER </span>
+            amo esprimere la mia creatività attraverso il digitale.
+          </p>
+        </StyledContainerText>
+      </StyledSectionTopDesktop>
 
       <StyledContainerSectionCarousel>
         <h3>LE MIE SKILLS</h3>

@@ -8,6 +8,8 @@ import {
 } from "./ContainerQuestions.style";
 
 import iconXYellow from "../../assets/images/iconXYellow.png";
+import pageCv1 from "../../assets/images/Curriculum Front End.png";
+import pageCv2 from "../../assets/images/Curriculum Front End (2).png";
 
 function ContainerQuestions(className, children) {
   const [openAnswFED, setOpenAnswFED] = useState(false);
@@ -15,6 +17,7 @@ function ContainerQuestions(className, children) {
   const [openAnswOffer, setOpenAnswOffer] = useState(false);
   const [openAnswCertifications, setOpenAnswCertifications] = useState(false);
   const [openAnswBio, setOpenAnswBio] = useState(false);
+  const [openAnswCV, setOpenAnswCV] = useState(false);
   const [colorQuestions, setColorQuestions] = useState("#c0cbb6");
 
   useEffect(() => {
@@ -24,9 +27,10 @@ function ContainerQuestions(className, children) {
       openAnswUXUI ||
       openAnswOffer ||
       openAnswCertifications ||
-      openAnswBio
+      openAnswBio ||
+      openAnswCV
     ) {
-      setColorQuestions("#004138"); // Cambia colore quando uno degli stati è true
+      setColorQuestions("#026457"); // Cambia colore quando uno degli stati è true
     } else {
       setColorQuestions("#c0cbb6"); // Ritorna al colore originale se tutti sono falsi
     }
@@ -36,6 +40,7 @@ function ContainerQuestions(className, children) {
     openAnswOffer,
     openAnswCertifications,
     openAnswBio,
+    openAnswCV,
   ]);
 
   return (
@@ -181,7 +186,7 @@ function ContainerQuestions(className, children) {
             <StyledContainerX>
               <img
                 src={iconXYellow}
-                alt="munu icon"
+                alt="icon x close"
                 onClick={() => setOpenAnswBio((curr) => !curr)}
               />
             </StyledContainerX>
@@ -204,6 +209,31 @@ function ContainerQuestions(className, children) {
                 sul sociale e sulla natura, in un ambiente dinamico dove
                 crescere e contribuire attivamente.
               </p>
+            </StyledContainerAnswer>
+          </>
+        ) : (
+          ""
+        )}
+
+        <h4
+          onClick={() => setOpenAnswCV((curr) => !curr)}
+          style={{ color: colorQuestions }}
+        >
+          Vuoi consultare il mio CV?
+        </h4>
+        {openAnswCV ? (
+          <>
+            <StyledContainerX>
+              <img
+                src={iconXYellow}
+                alt="munu icon"
+                onClick={() => setOpenAnswCV((curr) => !curr)}
+              />
+            </StyledContainerX>
+
+            <StyledContainerAnswer>
+              <img src={pageCv1} alt="curriculum vitae" />
+              <img src={pageCv2} alt="curriculum vitae" />
             </StyledContainerAnswer>
           </>
         ) : (

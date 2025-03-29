@@ -13,20 +13,20 @@ export const CarouselContainer = styled.div`
   padding: 20px 0 20px 0;
   /* Large or high-resolution screens */
   @media all and (min-width: 1690px) {
-    width: 40%;
-    margin: auto;
+    width: 80%;
+
+    margin: 40px auto 40px auto;
   }
 
   /* Desktop or Laptop screens */
   @media all and (min-width: 1280px) and (max-width: 1689px) {
-    width: 40%;
-    margin: auto;
+    width: 80%;
+    margin: 40px auto 40px auto;
   }
 
   /* Tablet in vertical mode and landscape mode */
   @media all and (min-width: 481px) and (max-width: 1279px) {
-    width: 70%;
-    margin: auto;
+    width: 100%;
   }
 `;
 

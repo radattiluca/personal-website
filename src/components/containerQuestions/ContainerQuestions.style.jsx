@@ -20,12 +20,6 @@ export const StyledContainerQuestions = styled.div`
     cursor: pointer;
   }
 
-  & img {
-    width: 25px;
-    height: 25px;
-    margin: auto;
-  }
-
   /* Large or high-resolution screens */
   @media all and (min-width: 1690px) {
     width: 80%;
@@ -47,6 +41,10 @@ export const StyledContainerQuestions = styled.div`
 `;
 
 export const StyledContainerAnswer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   & p {
     color: #c0cbb6;
     padding: 10px;
@@ -63,12 +61,39 @@ export const StyledContainerAnswer = styled.div`
 
   & a {
     text-decoration: none;
-    color: #5d9890;
-    font-weight: 700;
+    color: #f1f3ef;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    /* Large or high-resolution screens */
+    @media all and (min-width: 1690px) {
+      width: 60%;
+    }
+
+    /* Desktop or Laptop screens */
+    @media all and (min-width: 1280px) and (max-width: 1689px) {
+      width: 60%;
+    }
+
+    /* Tablet in vertical mode and landscape mode */
+    @media all and (min-width: 481px) and (max-width: 1279px) {
+      width: 80%;
+    }
   }
 `;
 
 export const StyledContainerX = styled.div`
   width: 100%;
-  text-align: center;
+  text-align: right;
+  & img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
 `;

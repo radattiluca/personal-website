@@ -29,12 +29,18 @@ export const StyledSlider = styled(Slider)`
 
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
+      &:hover {
+        opacity: 9;
+      }
       left: 395px;
     }
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
       left: 395px;
+      &:hover {
+        opacity: 9;
+      }
     }
   }
   .slick-next {
@@ -46,18 +52,25 @@ export const StyledSlider = styled(Slider)`
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
       right: 355px;
+
+      &:hover {
+        opacity: 9;
+      }
     }
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
       right: 355px;
+      &:hover {
+        opacity: 9;
+      }
     }
   }
 
   .slick-prev:before,
   .slick-next:before {
     font-size: 33px;
-    color: #c0cbb6;
+    color: #004138;
   }
 
   .slick-prev,
@@ -75,21 +88,30 @@ export const SlideStyle = styled.div`
   img {
     width: 80%;
     margin: auto;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     border-radius: 8px;
+    cursor: pointer;
+    opacity: 1;
 
     &:hover {
-      transform: scale(1.2);
+      transition: all 0.7s ease-in-out;
+      transform: scale(0.9);
+      opacity: 0.9;
     }
 
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
-      width: 30%;
+      width: 50%;
     }
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
-      width: 30%;
+      width: 50%;
+    }
+
+    /* Tablet in vertical mode and landscape mode */
+    @media all and (min-width: 481px) and (max-width: 1279px) {
+      width: 50%;
     }
   }
 `;
