@@ -1,4 +1,4 @@
-# ✨ Portfolio Digitale - [Luca Radatti]
+# ✨ Portfolio Digitale - Luca Radatti
 
 Benvenuto nel repository del mio **Portfolio Digitale**! Questo progetto raccoglie i miei lavori e competenze nel campo dello sviluppo web e del design UX/UI.
 
@@ -40,8 +40,8 @@ Clona il repository e installa le dipendenze:
 
 Se vuoi collaborare o semplicemente fare due chiacchiere, contattami su:
 
-- 🔗 **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://linkedin.com/in/tuo-nome)
-- 🐙 **GitHub**: [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/tuo-username)
+- 🔗 **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](www.linkedin.com/in/radatti-luca)
+- 🐙 **GitHub**: [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/radattiluca)
 
 ---
 
