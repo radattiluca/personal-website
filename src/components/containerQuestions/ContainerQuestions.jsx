@@ -21,7 +21,6 @@ function ContainerQuestions(className, children) {
   const [colorQuestions, setColorQuestions] = useState("#c0cbb6");
 
   useEffect(() => {
-    console.log("cambimo il colore");
     if (
       openAnswFED ||
       openAnswUXUI ||

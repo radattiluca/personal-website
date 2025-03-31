@@ -48,6 +48,14 @@ import tsProject from "../../assets/images/TypeScript.png";
 import reactProject from "../../assets/images/React.png";
 import finalProject from "../../assets/images/Final.png";
 
+//import pdf projects
+import project1PDF from "../../assets/pdf/Presentazione_Luca_Radatti_Website.pdf";
+import project2PDF from "../../assets/pdf/Presentazione_Progetto_JavaScript_Luca_Radatti.pdf";
+import project3PDF from "../../assets/pdf/Presentazione_BookFinder.pdf";
+import project4PDF from "../../assets/pdf/Presentazione_TypeScript.pdf";
+import project5PDF from "../../assets/pdf/Presentazione_EggPlant.pdf";
+import project6PDF from "../../assets/pdf/Presentazione_Offset.pdf";
+
 import Carousel from "../carousel/Carousel";
 import CarouselProjects from "../carouselProjects/CarouselProjects";
 
@@ -61,27 +69,44 @@ function BodyHome({ className, children }) {
       src: htmlcssImage,
       alt: "html e css image project",
       link: "https://radattiluca.github.io./",
-      repository: "https://github.com/radattiluca/radattiluca.github.io",
+      repository: "https://github.com/radattiluca/radattiluca.github.io.git",
+      pdf: project1PDF,
     },
     {
       src: jsBasic,
       alt: "js Basic image project",
+      link: "https://tomatocounter.netlify.app/",
+      repository: "https://github.com/radattiluca/PROGETTO-JS-BASIC.git",
+      pdf: project2PDF,
     },
     {
       src: jsAdvanced,
       alt: "js Advanced image project",
+      link: "https://bookfinderbycategory.netlify.app",
+      repository: "https://github.com/radattiluca/project-book-finder.git",
+      pdf: project3PDF,
     },
     {
       src: tsProject,
       alt: "type script image project",
+      link: "https://codepen.io/Luca-Radatti/pen/vEBPmgM",
+      repository: "https://github.com/radattiluca/Project-Type-Script.git",
+      pdf: project4PDF,
     },
     {
       src: reactProject,
       alt: "react image project",
+      link: "https://eggplant-veg-recipes.netlify.app/",
+      repository:
+        "https://github.com/radattiluca/recipe-veg-research-project.git",
+      pdf: project5PDF,
     },
     {
       src: finalProject,
       alt: "final image project",
+      link: "https://offset-footprint-calculator.netlify.app/",
+      repository: "https://github.com/radattiluca/offset-final-project.git",
+      pdf: project6PDF,
     },
   ];
 
@@ -101,7 +126,7 @@ function BodyHome({ className, children }) {
     setSlides(arraySlides);
   }, []);
 
-  const { openInfo, setOpenInfo } = useContext(Context);
+  // const { openInfo, setOpenInfo } = useContext(Context);
 
   return (
     <div className={className}>

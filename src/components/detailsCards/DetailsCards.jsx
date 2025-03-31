@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { Context } from "../../store/Context";
+
 //import styles
 import {
   StyledDetailsCards,
@@ -5,26 +8,46 @@ import {
   StyledContainerPDF,
   StyledContainerSiteWeb,
   StyledContainerRepository,
+  StyledContainerClose,
 } from "./DetailsCard.style";
 
 //import image
-import pdf from "../../assets/images/iconPdf.png";
-import repository from "../../assets/images/repository.svg";
+import pdfIcon from "../../assets/images/iconPdf.png";
+import repositoryImage from "../../assets/images/repository.png";
 import web from "../../assets/images/iconSite.png";
+import closeXDark from "../../assets/images/iconX.png";
 
-function DetailsCards({ className, children }) {
+function DetailsCards({ className, children, repository, link, pdf }) {
+  const { setOpenLinksProject } = useContext(Context);
+  const { dotsShow, setDotsShow } = useContext(Context);
   return (
     <div className={className}>
       <StyledContainerDetailsCards>
         <StyledContainerPDF>
-          <img src={pdf} alt="" />
+          <a href={pdf} target="_blank" rel="noopener noreferrer">
+            <img src={pdfIcon} alt="file pdf icon" />
+          </a>
         </StyledContainerPDF>
         <StyledContainerSiteWeb>
-          <img src={web} alt="" />
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <img src={web} alt="web icon" />
+          </a>
         </StyledContainerSiteWeb>
         <StyledContainerRepository>
-          <img src={repository} alt="" />
+          <a href={repository} target="_blank" rel="noopener noreferrer">
+            <img src={repositoryImage} alt="Logo GitHub Icon" />
+          </a>
         </StyledContainerRepository>
+        <StyledContainerClose>
+          <img
+            src={closeXDark}
+            alt="x close"
+            onClick={() => {
+              setOpenLinksProject((curr) => !curr);
+              setDotsShow((curr) => !curr);
+            }}
+          />
+        </StyledContainerClose>
       </StyledContainerDetailsCards>
     </div>
   );

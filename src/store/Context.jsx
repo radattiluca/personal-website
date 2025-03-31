@@ -5,9 +5,10 @@ export const Context = createContext();
 export function ContextProvider({ children }) {
   const [extendNavbar, setExtendNavbar] = useState(false);
   const [openInfo, setOpenInfo] = useState(false);
-
   const [images, setImages] = useState([]);
   const [slides, setSlides] = useState([]);
+  const [openLinksProject, setOpenLinksProject] = useState(false);
+  const [dotsShow, setDotsShow] = useState(true);
 
   return (
     <Context.Provider
@@ -20,6 +21,10 @@ export function ContextProvider({ children }) {
         setImages,
         slides,
         setSlides,
+        openLinksProject,
+        setOpenLinksProject,
+        dotsShow,
+        setDotsShow,
       }}
     >
       {children}

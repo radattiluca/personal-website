@@ -32,12 +32,12 @@ export const StyledSlider = styled(Slider)`
       &:hover {
         opacity: 9;
       }
-      left: 395px;
+      /* left: 395px; */
     }
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
-      left: 395px;
+      /* left: 395px; */
       &:hover {
         opacity: 9;
       }
@@ -51,7 +51,7 @@ export const StyledSlider = styled(Slider)`
 
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
-      right: 355px;
+      /* right: 355px; */
 
       &:hover {
         opacity: 9;
@@ -60,7 +60,7 @@ export const StyledSlider = styled(Slider)`
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
-      right: 355px;
+      /* right: 355px; */
       &:hover {
         opacity: 9;
       }
@@ -71,6 +71,17 @@ export const StyledSlider = styled(Slider)`
   .slick-next:before {
     font-size: 33px;
     color: #004138;
+    display: none;
+
+    /* Large or high-resolution screens */
+    @media all and (min-width: 1690px) {
+      display: flex;
+    }
+
+    /* Desktop or Laptop screens */
+    @media all and (min-width: 1280px) and (max-width: 1689px) {
+      display: flex;
+    }
   }
 
   .slick-prev,
@@ -84,6 +95,7 @@ export const SlideStyle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  outline: none;
 
   img {
     width: 80%;
@@ -91,13 +103,6 @@ export const SlideStyle = styled.div`
     transition: transform 0.4s ease-in-out;
     border-radius: 8px;
     cursor: pointer;
-    opacity: 1;
-
-    &:hover {
-      transition: all 0.7s ease-in-out;
-      transform: scale(0.9);
-      opacity: 0.9;
-    }
 
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
@@ -106,12 +111,12 @@ export const SlideStyle = styled.div`
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
-      width: 50%;
+      width: 60%;
     }
 
     /* Tablet in vertical mode and landscape mode */
     @media all and (min-width: 481px) and (max-width: 1279px) {
-      width: 50%;
+      width: 80%;
     }
   }
 `;
