@@ -233,7 +233,7 @@ function ContainerQuestions(className, children) {
               <p>
                 Questo mi ha portato a specializzarmi nello sviluppo web con un
                 master in Front End Development su Start2impact University, dove
-                ho affinando competenze tecniche e creative. In questo momento
+                ho affinato competenze tecniche e creative. In questo momento
                 sto ampliandola mia formazione con UX/UI Design per progettare
                 esperienze intuitive ed efficaci.
               </p>
