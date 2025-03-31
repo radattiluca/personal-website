@@ -11,6 +11,9 @@ import iconXYellow from "../../assets/images/iconXYellow.png";
 import pageCv1 from "../../assets/images/Curriculum Front End.png";
 import pageCv2 from "../../assets/images/Curriculum Front End (2).png";
 
+//import libraries
+import { motion } from "framer-motion";
+
 function ContainerQuestions(className, children) {
   const [openAnswFED, setOpenAnswFED] = useState(false);
   const [openAnswUXUI, setOpenAnswUXUI] = useState(false);
@@ -45,12 +48,19 @@ function ContainerQuestions(className, children) {
   return (
     <div className={className}>
       <StyledContainerQuestions>
-        <h4
-          onClick={() => setOpenAnswFED((curr) => !curr)}
-          style={{ color: colorQuestions }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Cos'è un Front End Developer?
-        </h4>
+          <h4
+            onClick={() => setOpenAnswFED((curr) => !curr)}
+            style={{ color: colorQuestions }}
+          >
+            Cos'è un Front End Developer?
+          </h4>
+        </motion.div>
         {openAnswFED ? (
           <>
             <StyledContainerX>
@@ -73,13 +83,19 @@ function ContainerQuestions(className, children) {
         ) : (
           ""
         )}
-
-        <h4
-          onClick={() => setOpenAnswUXUI((curr) => !curr)}
-          style={{ color: colorQuestions }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Cos'è un UX/UI Designer?
-        </h4>
+          <h4
+            onClick={() => setOpenAnswUXUI((curr) => !curr)}
+            style={{ color: colorQuestions }}
+          >
+            Cos'è un UX/UI Designer?
+          </h4>
+        </motion.div>
         {openAnswUXUI ? (
           <>
             <StyledContainerX>
@@ -104,13 +120,19 @@ function ContainerQuestions(className, children) {
         ) : (
           ""
         )}
-
-        <h4
-          onClick={() => setOpenAnswOffer((curr) => !curr)}
-          style={{ color: colorQuestions }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Cosa offro?
-        </h4>
+          <h4
+            onClick={() => setOpenAnswOffer((curr) => !curr)}
+            style={{ color: colorQuestions }}
+          >
+            Cosa offro?
+          </h4>
+        </motion.div>
         {openAnswOffer ? (
           <>
             <StyledContainerX>
@@ -134,13 +156,19 @@ function ContainerQuestions(className, children) {
         ) : (
           ""
         )}
-
-        <h4
-          onClick={() => setOpenAnswCertifications((curr) => !curr)}
-          style={{ color: colorQuestions }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Quale sono le mie certificazioni?
-        </h4>
+          <h4
+            onClick={() => setOpenAnswCertifications((curr) => !curr)}
+            style={{ color: colorQuestions }}
+          >
+            Quale sono le mie certificazioni?
+          </h4>
+        </motion.div>
         {openAnswCertifications ? (
           <>
             <StyledContainerX>
@@ -173,13 +201,19 @@ function ContainerQuestions(className, children) {
         ) : (
           ""
         )}
-
-        <h4
-          onClick={() => setOpenAnswBio((curr) => !curr)}
-          style={{ color: colorQuestions }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Qual'è la mia storia?
-        </h4>
+          <h4
+            onClick={() => setOpenAnswBio((curr) => !curr)}
+            style={{ color: colorQuestions }}
+          >
+            Qual'è la mia storia?
+          </h4>
+        </motion.div>
         {openAnswBio ? (
           <>
             <StyledContainerX>
@@ -213,13 +247,19 @@ function ContainerQuestions(className, children) {
         ) : (
           ""
         )}
-
-        <h4
-          onClick={() => setOpenAnswCV((curr) => !curr)}
-          style={{ color: colorQuestions }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Vuoi consultare il mio CV?
-        </h4>
+          <h4
+            onClick={() => setOpenAnswCV((curr) => !curr)}
+            style={{ color: colorQuestions }}
+          >
+            Vuoi consultare il mio CV?
+          </h4>
+        </motion.div>
         {openAnswCV ? (
           <>
             <StyledContainerX>

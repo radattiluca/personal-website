@@ -132,27 +132,54 @@ function BodyHome({ className, children }) {
 
   return (
     <div className={className}>
-      <StyledNavbar></StyledNavbar>
-
-      <StyledContainerSectionSocial>
-        <a href="https://github.com/radattiluca" target="_blank">
-          <img src={gitHubLogo} alt="logo github" />
-        </a>
-        <a href="https://www.linkedin.com/in/radatti-luca/" target="_blank">
-          <img src={linkedinLogo} alt="logo linkedin" />
-        </a>
-      </StyledContainerSectionSocial>
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <StyledNavbar></StyledNavbar>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <StyledContainerSectionSocial>
+          <a href="https://github.com/radattiluca" target="_blank">
+            <img src={gitHubLogo} alt="logo github" />
+          </a>
+          <a href="https://www.linkedin.com/in/radatti-luca/" target="_blank">
+            <img src={linkedinLogo} alt="logo linkedin" />
+          </a>
+        </StyledContainerSectionSocial>
+      </motion.div>
       <StyledSectionTopDesktop>
         <StyledContainerImage>
           <img src={imageHome} alt="picture keyboard with hands" />
         </StyledContainerImage>
         <StyledContainerText>
-          <h2>BENVENUTI!</h2>
-          <p>
-            Sono <span>LUCA</span>, sono un aspirante <span>FRONT END</span> e
-            <span> UX/UI DESIGNER </span>
-            amo esprimere la mia creatività attraverso il digitale.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <h2>BENVENUTI!</h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <p>
+              Sono <span>LUCA</span>, sono un aspirante <span>FRONT END</span> e
+              <span> UX/UI DESIGNER </span>
+              amo esprimere la mia creatività attraverso il digitale.
+            </p>
+          </motion.div>
         </StyledContainerText>
       </StyledSectionTopDesktop>
 
@@ -163,55 +190,34 @@ function BodyHome({ className, children }) {
         </StyledContainerCarousel>
       </StyledContainerSectionCarousel>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }} // "amount" indica quanto dell'elemento deve essere visibile
-      >
-        <Element id="carouselWorks">
-          <StyledContainerSectionProjects>
-            <h3>I MIEI LAVORI</h3>
-            <h4>
-              Scorri la selezione per vedere l'anteprima dei miei progetti
-            </h4>
-            <StyledContainerCarouselProjects>
-              <CarouselProjects />
-            </StyledContainerCarouselProjects>
-          </StyledContainerSectionProjects>
-        </Element>
-      </motion.div>
+      <Element id="carouselWorks">
+        <StyledContainerSectionProjects>
+          <h3>I MIEI LAVORI</h3>
+          <h4>Scorri la selezione per vedere l'anteprima dei miei progetti</h4>
+          <StyledContainerCarouselProjects>
+            <CarouselProjects />
+          </StyledContainerCarouselProjects>
+        </StyledContainerSectionProjects>
+      </Element>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <Element id="questions">
-          <StyledContainerSectionQuestions>
-            <h3>DOMANDE FREQUENTI</h3>
-            <StyledContainerQuestions>
-              <StyledContainerQ></StyledContainerQ>
-            </StyledContainerQuestions>
-          </StyledContainerSectionQuestions>
-        </Element>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <Element id="form">
-          <StyledContainerSectionContact>
-            <h3>CONTATTAMI</h3>
-            <StyledContainerContact>
-              <StyledForm></StyledForm>
-            </StyledContainerContact>
-          </StyledContainerSectionContact>
-        </Element>
-      </motion.div>
+      <Element id="questions">
+        <StyledContainerSectionQuestions>
+          <h3>DOMANDE FREQUENTI</h3>
+
+          <StyledContainerQuestions>
+            <StyledContainerQ></StyledContainerQ>
+          </StyledContainerQuestions>
+        </StyledContainerSectionQuestions>
+      </Element>
+
+      <Element id="form">
+        <StyledContainerSectionContact>
+          <h3>CONTATTAMI</h3>
+          <StyledContainerContact>
+            <StyledForm></StyledForm>
+          </StyledContainerContact>
+        </StyledContainerSectionContact>
+      </Element>
       <StyledFooter></StyledFooter>
     </div>
   );

@@ -43,7 +43,7 @@ export const StyledContainerQuestions = styled.div`
 export const StyledContainerAnswer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 
   & p {
     color: #c0cbb6;
