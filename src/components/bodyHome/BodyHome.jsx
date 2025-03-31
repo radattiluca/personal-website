@@ -56,8 +56,10 @@ import project4PDF from "../../assets/pdf/Presentazione_TypeScript.pdf";
 import project5PDF from "../../assets/pdf/Presentazione_EggPlant.pdf";
 import project6PDF from "../../assets/pdf/Presentazione_Offset.pdf";
 
+//import libraries
 import Carousel from "../carousel/Carousel";
 import CarouselProjects from "../carouselProjects/CarouselProjects";
+import { motion } from "framer-motion";
 
 function BodyHome({ className, children }) {
   const { images, setImages } = useContext(Context);
@@ -161,33 +163,55 @@ function BodyHome({ className, children }) {
         </StyledContainerCarousel>
       </StyledContainerSectionCarousel>
 
-      <Element id="carouselWorks">
-        <StyledContainerSectionProjects>
-          <h3>I MIEI LAVORI</h3>
-          <h4>Scorri la selezione per vedere l'anteprima dei miei progetti</h4>
-          <StyledContainerCarouselProjects>
-            <CarouselProjects />
-          </StyledContainerCarouselProjects>
-        </StyledContainerSectionProjects>
-      </Element>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }} // "amount" indica quanto dell'elemento deve essere visibile
+      >
+        <Element id="carouselWorks">
+          <StyledContainerSectionProjects>
+            <h3>I MIEI LAVORI</h3>
+            <h4>
+              Scorri la selezione per vedere l'anteprima dei miei progetti
+            </h4>
+            <StyledContainerCarouselProjects>
+              <CarouselProjects />
+            </StyledContainerCarouselProjects>
+          </StyledContainerSectionProjects>
+        </Element>
+      </motion.div>
 
-      <Element id="questions">
-        <StyledContainerSectionQuestions>
-          <h3>DOMANDE FREQUENTI</h3>
-          <StyledContainerQuestions>
-            <StyledContainerQ></StyledContainerQ>
-          </StyledContainerQuestions>
-        </StyledContainerSectionQuestions>
-      </Element>
-
-      <Element id="form">
-        <StyledContainerSectionContact>
-          <h3>CONTATTAMI</h3>
-          <StyledContainerContact>
-            <StyledForm></StyledForm>
-          </StyledContainerContact>
-        </StyledContainerSectionContact>
-      </Element>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Element id="questions">
+          <StyledContainerSectionQuestions>
+            <h3>DOMANDE FREQUENTI</h3>
+            <StyledContainerQuestions>
+              <StyledContainerQ></StyledContainerQ>
+            </StyledContainerQuestions>
+          </StyledContainerSectionQuestions>
+        </Element>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Element id="form">
+          <StyledContainerSectionContact>
+            <h3>CONTATTAMI</h3>
+            <StyledContainerContact>
+              <StyledForm></StyledForm>
+            </StyledContainerContact>
+          </StyledContainerSectionContact>
+        </Element>
+      </motion.div>
       <StyledFooter></StyledFooter>
     </div>
   );
