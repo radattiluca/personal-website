@@ -32,12 +32,12 @@ export const StyledSlider = styled(Slider)`
       &:hover {
         opacity: 9;
       }
-      /* left: 395px; */
+      left: 200px;
     }
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
-      /* left: 395px; */
+      left: 150px;
       &:hover {
         opacity: 9;
       }
@@ -51,7 +51,7 @@ export const StyledSlider = styled(Slider)`
 
     /* Large or high-resolution screens */
     @media all and (min-width: 1690px) {
-      /* right: 355px; */
+      right: 200px;
 
       &:hover {
         opacity: 9;
@@ -60,7 +60,7 @@ export const StyledSlider = styled(Slider)`
 
     /* Desktop or Laptop screens */
     @media all and (min-width: 1280px) and (max-width: 1689px) {
-      /* right: 355px; */
+      right: 150px;
       &:hover {
         opacity: 9;
       }
