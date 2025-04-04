@@ -146,9 +146,11 @@ function ContainerQuestions(className, children) {
             <StyledContainerAnswer>
               <p>
                 <ul>
-                  <li> Studio del target</li>
-                  <li> Restyling e creazione interfaccia</li>
-                  <li> Progettazione sito web</li>
+                  <li> Siti Web Moderni e Leggeri.</li>
+                  <li> Prototipi Veloci per Idee o MVP</li>
+                  <li> Esperienza Utente Curata</li>
+                  <li>Modernizzazione di Vecchi Siti</li>
+                  <li>Integrazione con strumenti esterni</li>
                 </ul>
               </p>
             </StyledContainerAnswer>
@@ -185,14 +187,16 @@ function ContainerQuestions(className, children) {
                   <li>
                     Master in Front End Development con
                     <a href="https://www.start2impact.it/" target="_blank">
-                      <span> Start2Impact</span>
+                      <span> Start2Impact </span>
                     </a>
+                    - completato
                   </li>
                   <li>
                     Master in UX/UI Designer con
                     <a href="https://www.start2impact.it/" target="_blank">
-                      <span> Start2Impact</span>
+                      <span> Start2Impact </span>
                     </a>
+                    - in corso
                   </li>
                 </ul>
               </p>

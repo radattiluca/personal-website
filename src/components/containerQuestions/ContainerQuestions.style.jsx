@@ -55,6 +55,7 @@ export const StyledContainerAnswer = styled.div`
       margin-left: 20px;
       li {
         padding: 3px;
+        list-style-position: inside;
       }
     }
   }
