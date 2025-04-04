@@ -42,7 +42,7 @@ Clona il repository e installa le dipendenze:
 
 Se vuoi collaborare o semplicemente fare due chiacchiere, contattami su:
 
-- 🔗 **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](www.linkedin.com/in/radatti-luca)
+- 🔗 **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/radatti-luca)
 - 🐙 **GitHub**: [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/radattiluca)
 
 ---
