@@ -2,9 +2,11 @@
 
 Benvenuto nel repository del mio **Portfolio Digitale**! Questo progetto raccoglie i miei lavori e competenze nel campo dello sviluppo web e del design UX/UI.
 
+![Senzanome](https://raw.githubusercontent.com/radattiluca/personal-website/refs/heads/main/public/imageOG.png)
+
 ## 🎨 Demo
 
-[![Live Demo]](https://radattilucadeveloper.netlify.app/)
+[[Dagli uno sguardo!]](https://radattilucadeveloper.netlify.app/)
 
 ## ✨ Tecnologie Utilizzate
 
@@ -24,7 +26,7 @@ Benvenuto nel repository del mio **Portfolio Digitale**! Questo progetto raccogl
 Clona il repository e installa le dipendenze:
 
 ```bash
- git clone https://github.com/tuo-username/tuo-portfolio.git
+ git clone https://github.com/radattiluca/personal-website.git
  cd tuo-portfolio
  npm install
  npm run dev
